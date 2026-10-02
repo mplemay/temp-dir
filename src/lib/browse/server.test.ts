@@ -3,7 +3,11 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it } from "vite-plus/test";
 import { MissingFixtureError, defaultArtifactPath } from "@/lib/ranked-providers/load";
-import { resolveFixtureText, type FixtureAssetStore } from "./fixture-text";
+import {
+  productKnowledgeAssetKeys,
+  resolveFixtureText,
+  type FixtureAssetStore,
+} from "./fixture-text";
 
 function missingPath(): string {
   return join(mkdtempSync(join(tmpdir(), "hosted-fixture-")), "list.json");
@@ -26,6 +30,12 @@ describe("resolveFixtureText", () => {
 
     expect(text).toBe(committed);
     expect(text).toContain('"rank"');
+  });
+
+  it("accepts Nitro's colon-separated product-knowledge keys", () => {
+    expect(
+      productKnowledgeAssetKeys(["product-knowledge:her2-ihc.md", "ranked-providers:list.json"]),
+    ).toEqual(["product-knowledge/her2-ihc.md"]);
   });
 
   it("throws the ranked missing-fixture error when the asset key is absent", async () => {

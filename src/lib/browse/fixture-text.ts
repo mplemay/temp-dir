@@ -1,5 +1,11 @@
 import { existsSync, readFileSync } from "node:fs";
 
+export function productKnowledgeAssetKeys(keys: string[]): string[] {
+  return keys
+    .map((key) => key.replaceAll("\\", "/").replaceAll(":", "/"))
+    .filter((key) => key.startsWith("product-knowledge/") && key.endsWith(".md"));
+}
+
 export type FixtureAssetStore = {
   getItem(key: string): Promise<unknown>;
   getKeys(): Promise<string[]>;

@@ -34,7 +34,11 @@ import {
   MissingFixtureError as RankedMissingFixtureError,
 } from "@/lib/ranked-providers/load";
 import { notesWithClinicianNames } from "./display";
-import { resolveFixtureText, type FixtureAssetStore } from "./fixture-text";
+import {
+  productKnowledgeAssetKeys,
+  resolveFixtureText,
+  type FixtureAssetStore,
+} from "./fixture-text";
 import { toBriefPagePayload, toRankedListRow } from "./payload";
 
 async function assetStore(): Promise<FixtureAssetStore> {
@@ -85,9 +89,7 @@ async function hostedKnowledge(store: FixtureAssetStore) {
   if (existsSync(defaultFixtureDir)) {
     return loadProductKnowledge();
   }
-  const keys = (await store.getKeys())
-    .map((key) => key.replaceAll("\\", "/"))
-    .filter((key) => key.startsWith("product-knowledge/") && key.endsWith(".md"));
+  const keys = productKnowledgeAssetKeys(await store.getKeys());
   if (keys.length === 0) {
     throw new ProductMissingFixtureError("product-knowledge");
   }

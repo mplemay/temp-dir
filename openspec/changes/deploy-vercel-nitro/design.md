@@ -60,7 +60,7 @@ Pass that on `nitro()` if the plugin options accept a Nitro config. If they do n
 Keep `loadRankedProviders`, `loadMarketIntelligence`, `loadCrmNotes`, `loadProductKnowledge`, and `loadProviderBrief` synchronous. Tests and the generate scripts keep calling them against the repo. `src/lib/browse/server.ts` is the production branch:
 
 - When the source fixture path exists, call the synchronous loaders (local `vp dev`, tests that import the server module).
-- When it does not, read the same relative keys from `useStorage("assets:data")` and pass the text into the existing parse functions. Product knowledge lists markdown keys on that mount and reuses the current per-file schema loop, extracted only if the directory loader cannot accept an in-memory file list.
+- When it does not, read the same relative keys from `useStorage("assets:data")` and pass the text into the existing parse functions. Nitro's bundled asset driver lists those keys with `:` separators (`product-knowledge:her2-ihc.md`), so key listing has to treat `:` like `/`. Product knowledge lists markdown keys on that mount and reuses the current per-file schema loop, extracted only if the directory loader cannot accept an in-memory file list.
 - A missing key still throws the loader’s existing missing-fixture error. Do not return an empty success.
 
 Alternative considered: `import.meta.glob` of every JSON and markdown file. That also survives bundling, but it rewrites every loader and drops Nitro’s dev filesystem mount. Server assets keep one directory and the directory listing the assay catalog needs.
