@@ -1,33 +1,6 @@
-# design-system Specification
+# Spec Delta
 
-## Purpose
-
-Defines the shared UI system for the application: tokenized theming and reusable primitives that routes compose instead of one-off styled markup.
-
-## Requirements
-
-### Requirement: Tokenized theme
-
-The application SHALL style pages with semantic color and typography tokens (for example background, foreground, and muted text) rather than hard-coded palette utilities on page layouts.
-
-#### Scenario: Home page uses theme tokens
-
-- **WHEN** a user views `/`
-- **THEN** the page background and text colors come from the shared theme tokens
-
-### Requirement: Shared UI primitives on the overview home
-
-The home page SHALL be composed from shared UI primitives, including a card with header, title, description, and content for each of the three feeds.
-
-#### Scenario: Home cards
-
-- **WHEN** a user opens `/`
-- **THEN** they see three cards titled for Market Intelligence, Product Knowledge, and CRM, each with a short description
-
-#### Scenario: Cards navigate
-
-- **WHEN** a user activates the Market Intelligence home card
-- **THEN** they navigate to the market intelligence page
+## MODIFIED Requirements
 
 ### Requirement: Component source of truth
 
@@ -42,6 +15,22 @@ Shared UI primitives SHALL live in the project as source files that routes impor
 
 - **WHEN** a developer inspects a feed browse route
 - **THEN** table, card, and badge primitives are imported from the shared UI module path under `@/`, not inlined as custom markup in the route
+
+## ADDED Requirements
+
+### Requirement: Shared UI primitives on the overview home
+
+The home page SHALL be composed from shared UI primitives, including a card with header, title, description, and content for each of the three feeds.
+
+#### Scenario: Home cards
+
+- **WHEN** a user opens `/`
+- **THEN** they see three cards titled for Market Intelligence, Product Knowledge, and CRM, each with a short description
+
+#### Scenario: Cards navigate
+
+- **WHEN** a user activates the Market Intelligence home card
+- **THEN** they navigate to the market intelligence page
 
 ### Requirement: Shared sidebar chrome
 
@@ -70,3 +59,11 @@ Feed browse pages SHALL be composed from shared card, table, and badge primitive
 
 - **WHEN** a user views the CRM page
 - **THEN** each note appears in a shared card
+
+## REMOVED Requirements
+
+### Requirement: Shared UI primitives on the home page
+
+**Reason**: The starter home card and dummy Continue button are replaced by a three-card feed overview that navigates.
+
+**Migration**: Use requirement “Shared UI primitives on the overview home”.

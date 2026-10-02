@@ -1,19 +1,6 @@
-# app-shell Specification
+# Spec Delta
 
-## Purpose
-
-Provides the web application's document shell, file-based routes, home page, and not-found handling so every request is served as a React full-stack page rather than a static SPA.
-
-## Requirements
-
-### Requirement: HTML document shell
-
-The application SHALL serve every page inside a complete HTML document with UTF-8 charset, a responsive viewport meta tag, and a document title.
-
-#### Scenario: Home page document
-
-- **WHEN** a client requests `/`
-- **THEN** the response is an HTML document that includes charset and viewport metadata and a non-empty title
+## MODIFIED Requirements
 
 ### Requirement: Home page
 
@@ -34,14 +21,7 @@ The application SHALL render a home page at `/` that identifies Market Intellige
 - **WHEN** a user activates the Market Intelligence overview control
 - **THEN** they navigate to the market intelligence page
 
-### Requirement: Unknown routes
-
-The application SHALL render a not-found page for paths that do not match a defined route.
-
-#### Scenario: Missing page
-
-- **WHEN** a user opens a path with no matching route
-- **THEN** they see a not-found message and the document remains a complete HTML page
+## ADDED Requirements
 
 ### Requirement: Persistent sidebar navigation
 
