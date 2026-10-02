@@ -1,0 +1,892 @@
+{
+  "generated_at": "2026-10-02T17:38:26.672Z",
+  "model": "gpt-6-luna",
+  "reasoning_effort": "medium",
+  "as_of": "2026-10-02",
+  "providers": [
+    {
+      "rank": 1,
+      "npi": "1600000045",
+      "impact_score": 208.37425,
+      "score_breakdown": {
+        "opportunity_patients": 167,
+        "ngs_gap_factor": 0.868,
+        "incumbent_weight": 1.25,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this CRC practice using Caris, the xT CDx companion-diagnostic headline makes Tempus xT CDx a timely fit to discuss.",
+      "has_crm": false
+    },
+    {
+      "rank": 2,
+      "npi": "1600000035",
+      "impact_score": 200.93765999999997,
+      "score_breakdown": {
+        "opportunity_patients": 183,
+        "ngs_gap_factor": 0.868,
+        "incumbent_weight": 1.1,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this mixed-tumor practice using an in-house lab, current headlines span tissue-limited ctDNA, CRC companion diagnostics, HER2, HRD, prostate HRR, and heme testing, making Tempus xF+, xF, xT CDx, HER2 IHC, HRD, and xT relevant to discuss.",
+      "has_crm": false
+    },
+    {
+      "rank": 3,
+      "npi": "1600000042",
+      "impact_score": 188.15471999999994,
+      "score_breakdown": {
+        "opportunity_patients": 171,
+        "ngs_gap_factor": 0.832,
+        "incumbent_weight": 1.15,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this mixed-tumor practice, current headlines span tissue-limited ctDNA, CRC companion diagnostics, HER2, HRD, prostate HRR, and heme testing, making Tempus xF+, xF, xT CDx, HER2 IHC, HRD, and xT relevant to discuss.",
+      "has_crm": false
+    },
+    {
+      "rank": 4,
+      "npi": "1600000017",
+      "impact_score": 179.56674999999998,
+      "score_breakdown": {
+        "opportunity_patients": 167,
+        "ngs_gap_factor": 0.85,
+        "incumbent_weight": 1.1,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this CRC practice using an in-house lab, the xT CDx companion-diagnostic headline makes Tempus xT CDx a timely fit to discuss.",
+      "has_crm": false
+    },
+    {
+      "rank": 5,
+      "npi": "1600000032",
+      "impact_score": 175.81199999999998,
+      "score_breakdown": {
+        "opportunity_patients": 147,
+        "ngs_gap_factor": 0.832,
+        "incumbent_weight": 1.25,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this prostate practice using FMI, the headline on prostate NGS and HRR genes creates a timely opening to discuss Tempus xT CDx.",
+      "has_crm": false
+    },
+    {
+      "rank": 6,
+      "npi": "1600000052",
+      "impact_score": 171.028,
+      "score_breakdown": {
+        "opportunity_patients": 143,
+        "ngs_gap_factor": 0.832,
+        "incumbent_weight": 1.25,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this CRC practice using Guardant, the xT CDx companion-diagnostic headline makes Tempus xT CDx a timely fit to discuss.",
+      "has_crm": false
+    },
+    {
+      "rank": 7,
+      "npi": "1600000016",
+      "impact_score": 165.04512499999996,
+      "score_breakdown": {
+        "opportunity_patients": 139,
+        "ngs_gap_factor": 0.826,
+        "incumbent_weight": 1.25,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this breast practice using Guardant, the HER2-low and ultralow therapy-selection headline makes Tempus HER2 IHC and xT CDx relevant to discuss.",
+      "has_crm": false
+    },
+    {
+      "rank": 8,
+      "npi": "1600000051",
+      "impact_score": 165.04512499999996,
+      "score_breakdown": {
+        "opportunity_patients": 139,
+        "ngs_gap_factor": 0.826,
+        "incumbent_weight": 1.25,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this breast practice using Caris, the HER2-low and ultralow therapy-selection headline makes Tempus HER2 IHC and xT CDx relevant to discuss.",
+      "has_crm": false
+    },
+    {
+      "rank": 9,
+      "npi": "1600000006",
+      "impact_score": 156.3202935,
+      "score_breakdown": {
+        "opportunity_patients": 106,
+        "ngs_gap_factor": 0.826,
+        "incumbent_weight": 1.15,
+        "event_boost": 1.15,
+        "crm_multiplier": 1.35
+      },
+      "readiness": "switch",
+      "concern": "Unsure which lab is used for hematology cases and wants to avoid the solid-tumor plus-normal workflow.",
+      "interest": "Guidance on which tumor-only panel path to order for heme cases.",
+      "why_now": "For heme cases, the provider is unsure which lab is used and wants to avoid a solid-tumor plus-normal workflow, so discuss Tempus xT as the tumor-only panel path.",
+      "has_crm": true
+    },
+    {
+      "rank": 10,
+      "npi": "1600000002",
+      "impact_score": 152.6340375,
+      "score_breakdown": {
+        "opportunity_patients": 106,
+        "ngs_gap_factor": 0.742,
+        "incumbent_weight": 1.25,
+        "event_boost": 1.15,
+        "crm_multiplier": 1.35
+      },
+      "readiness": "switch",
+      "concern": "Wants a clearer story for HER2-low therapy decisions before considering a change.",
+      "interest": "HER2-low therapy decision support.",
+      "why_now": "For this breast practice using FMI, the provider wants a clearer HER2-low therapy-decision story, and the matching headline makes Tempus HER2 IHC and xT CDx timely to discuss.",
+      "has_crm": true
+    },
+    {
+      "rank": 11,
+      "npi": "1600000027",
+      "impact_score": 139.29374999999996,
+      "score_breakdown": {
+        "opportunity_patients": 114,
+        "ngs_gap_factor": 0.85,
+        "incumbent_weight": 1.25,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this heme practice using Caris, the tumor-only panel headline makes Tempus xT relevant to discuss for hematologic malignancies.",
+      "has_crm": false
+    },
+    {
+      "rank": 12,
+      "npi": "1600000021",
+      "impact_score": 124.64562499999998,
+      "score_breakdown": {
+        "opportunity_patients": 115,
+        "ngs_gap_factor": 0.754,
+        "incumbent_weight": 1.25,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this mixed-tumor practice using Caris, current headlines span tissue-limited ctDNA, CRC companion diagnostics, HER2, HRD, prostate HRR, and heme testing, making Tempus xF+, xF, xT CDx, HER2 IHC, HRD, and xT relevant to discuss.",
+      "has_crm": false
+    },
+    {
+      "rank": 13,
+      "npi": "1600000004",
+      "impact_score": 121.93335,
+      "score_breakdown": {
+        "opportunity_patients": 84,
+        "ngs_gap_factor": 0.748,
+        "incumbent_weight": 1.25,
+        "event_boost": 1.15,
+        "crm_multiplier": 1.35
+      },
+      "readiness": "switch",
+      "concern": "Concerned about turnaround time versus Guardant liquid.",
+      "interest": "A thoracic liquid option if the turnaround-time concern can be addressed.",
+      "why_now": "For this NSCLC practice using Guardant, the provider is concerned about turnaround versus Guardant liquid and wants a thoracic liquid option, making Tempus xF+ and xF relevant to discuss in that context.",
+      "has_crm": true
+    },
+    {
+      "rank": 14,
+      "npi": "1600000046",
+      "impact_score": 112.72299999999998,
+      "score_breakdown": {
+        "opportunity_patients": 104,
+        "ngs_gap_factor": 0.754,
+        "incumbent_weight": 1.25,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this prostate practice using Guardant, the headline on prostate NGS and HRR genes creates a timely opening to discuss Tempus xT CDx.",
+      "has_crm": false
+    },
+    {
+      "rank": 15,
+      "npi": "1600000010",
+      "impact_score": 110.71912499999998,
+      "score_breakdown": {
+        "opportunity_patients": 99,
+        "ngs_gap_factor": 0.7779999999999999,
+        "incumbent_weight": 1.25,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this CRC practice using Guardant, the xT CDx companion-diagnostic headline makes Tempus xT CDx a timely fit to discuss.",
+      "has_crm": false
+    },
+    {
+      "rank": 16,
+      "npi": "1600000030",
+      "impact_score": 107.00611999999998,
+      "score_breakdown": {
+        "opportunity_patients": 104,
+        "ngs_gap_factor": 0.7779999999999999,
+        "incumbent_weight": 1.15,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this breast practice, the HER2-low and ultralow therapy-selection headline makes Tempus HER2 IHC and xT CDx relevant to discuss.",
+      "has_crm": false
+    },
+    {
+      "rank": 17,
+      "npi": "1600000011",
+      "impact_score": 106.13856,
+      "score_breakdown": {
+        "opportunity_patients": 114,
+        "ngs_gap_factor": 0.736,
+        "incumbent_weight": 1.1,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this prostate practice using an in-house lab, the headline on prostate NGS and HRR genes creates a timely opening to discuss Tempus xT CDx.",
+      "has_crm": false
+    },
+    {
+      "rank": 18,
+      "npi": "1600000041",
+      "impact_score": 103.44411,
+      "score_breakdown": {
+        "opportunity_patients": 99,
+        "ngs_gap_factor": 0.826,
+        "incumbent_weight": 1.1,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this heme practice using an in-house lab, the tumor-only panel headline makes Tempus xT relevant to discuss for hematologic malignancies.",
+      "has_crm": false
+    },
+    {
+      "rank": 19,
+      "npi": "1600000014",
+      "impact_score": 103.22399999999998,
+      "score_breakdown": {
+        "opportunity_patients": 96,
+        "ngs_gap_factor": 0.748,
+        "incumbent_weight": 1.25,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this NSCLC practice using FMI, the headline on ctDNA for EGFR and ALK resistance when tissue is QNS makes Tempus xF+ and xF relevant to discuss.",
+      "has_crm": false
+    },
+    {
+      "rank": 20,
+      "npi": "1600000034",
+      "impact_score": 98.923,
+      "score_breakdown": {
+        "opportunity_patients": 92,
+        "ngs_gap_factor": 0.748,
+        "incumbent_weight": 1.25,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this NSCLC practice using Guardant, the headline on ctDNA for EGFR and ALK resistance when tissue is QNS makes Tempus xF+ and xF relevant to discuss.",
+      "has_crm": false
+    },
+    {
+      "rank": 21,
+      "npi": "1600000008",
+      "impact_score": 97.31846249999998,
+      "score_breakdown": {
+        "opportunity_patients": 63,
+        "ngs_gap_factor": 0.7959999999999999,
+        "incumbent_weight": 1.25,
+        "event_boost": 1.15,
+        "crm_multiplier": 1.35
+      },
+      "readiness": "switch",
+      "concern": "Uses FMI and wants to avoid a long send-out.",
+      "interest": "How community gynecologic clinics can get HRD findings.",
+      "why_now": "For this gynecologic practice using FMI, the provider wants to avoid a long send-out and asks how community clinics can access HRD findings, making Tempus HRD timely to discuss.",
+      "has_crm": true
+    },
+    {
+      "rank": 22,
+      "npi": "1600000005",
+      "impact_score": 95.21047799999998,
+      "score_breakdown": {
+        "opportunity_patients": 69,
+        "ngs_gap_factor": 0.8079999999999999,
+        "incumbent_weight": 1.1,
+        "event_boost": 1.15,
+        "crm_multiplier": 1.35
+      },
+      "readiness": "switch",
+      "concern": "Prefers the in-house lab for surgical gynecologic specimens and wants specimen flow to stay simple.",
+      "interest": "Open to a send-out conversation.",
+      "why_now": "For this gynecologic practice that prefers its in-house lab for surgical specimens but is open to a send-out conversation, the HRD and PARP-decision headline makes Tempus HRD relevant to discuss while addressing specimen flow.",
+      "has_crm": true
+    },
+    {
+      "rank": 23,
+      "npi": "1600000003",
+      "impact_score": 94.22898749999999,
+      "score_breakdown": {
+        "opportunity_patients": 61,
+        "ngs_gap_factor": 0.7959999999999999,
+        "incumbent_weight": 1.25,
+        "event_boost": 1.15,
+        "crm_multiplier": 1.35
+      },
+      "readiness": "switch",
+      "concern": "No lab preference or switching intent stated.",
+      "interest": "Confirming HRD status before later-line therapy and tracking gynecologic academic trial eligibility.",
+      "why_now": "For this gynecologic practice using Caris, interest in confirming HRD before later-line therapy and tracking academic trial eligibility aligns with the HRD and PARP-decision headline and Tempus HRD.",
+      "has_crm": true
+    },
+    {
+      "rank": 24,
+      "npi": "1600000039",
+      "impact_score": 90.321,
+      "score_breakdown": {
+        "opportunity_patients": 84,
+        "ngs_gap_factor": 0.748,
+        "incumbent_weight": 1.25,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this NSCLC practice using Caris, the headline on ctDNA for EGFR and ALK resistance when tissue is QNS makes Tempus xF+ and xF relevant to discuss.",
+      "has_crm": false
+    },
+    {
+      "rank": 25,
+      "npi": "1600000028",
+      "impact_score": 88.10725,
+      "score_breakdown": {
+        "opportunity_patients": 77,
+        "ngs_gap_factor": 0.7959999999999999,
+        "incumbent_weight": 1.25,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this gynecologic practice using Guardant, the HRD and PARP-decision headline makes Tempus HRD relevant to discuss.",
+      "has_crm": false
+    },
+    {
+      "rank": 26,
+      "npi": "1600000026",
+      "impact_score": 87.90599999999999,
+      "score_breakdown": {
+        "opportunity_patients": 78,
+        "ngs_gap_factor": 0.7839999999999999,
+        "incumbent_weight": 1.25,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this gynecologic practice using FMI, the HRD and PARP-decision headline makes Tempus HRD relevant to discuss.",
+      "has_crm": false
+    },
+    {
+      "rank": 27,
+      "npi": "1600000018",
+      "impact_score": 85.26950999999998,
+      "score_breakdown": {
+        "opportunity_patients": 81,
+        "ngs_gap_factor": 0.7959999999999999,
+        "incumbent_weight": 1.15,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this gynecologic practice, the HRD and PARP-decision headline makes Tempus HRD relevant to discuss.",
+      "has_crm": false
+    },
+    {
+      "rank": 28,
+      "npi": "1600000024",
+      "impact_score": 85.07377999999999,
+      "score_breakdown": {
+        "opportunity_patients": 86,
+        "ngs_gap_factor": 0.748,
+        "incumbent_weight": 1.15,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this NSCLC practice, the headline on ctDNA for EGFR and ALK resistance when tissue is QNS makes Tempus xF+ and xF relevant to discuss.",
+      "has_crm": false
+    },
+    {
+      "rank": 29,
+      "npi": "1600000020",
+      "impact_score": 84.12249999999999,
+      "score_breakdown": {
+        "opportunity_patients": 77,
+        "ngs_gap_factor": 0.7599999999999999,
+        "incumbent_weight": 1.25,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this heme practice using FMI, the tumor-only panel headline makes Tempus xT relevant to discuss for hematologic malignancies.",
+      "has_crm": false
+    },
+    {
+      "rank": 30,
+      "npi": "1600000048",
+      "impact_score": 83.16408999999997,
+      "score_breakdown": {
+        "opportunity_patients": 79,
+        "ngs_gap_factor": 0.7959999999999999,
+        "incumbent_weight": 1.15,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this gynecologic practice, the HRD and PARP-decision headline makes Tempus HRD relevant to discuss.",
+      "has_crm": false
+    },
+    {
+      "rank": 31,
+      "npi": "1600000009",
+      "impact_score": 82.79424999999998,
+      "score_breakdown": {
+        "opportunity_patients": 77,
+        "ngs_gap_factor": 0.748,
+        "incumbent_weight": 1.25,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this NSCLC practice using Caris, the headline on ctDNA for EGFR and ALK resistance when tissue is QNS makes Tempus xF+ and xF relevant to discuss.",
+      "has_crm": false
+    },
+    {
+      "rank": 32,
+      "npi": "1600000044",
+      "impact_score": 82.79424999999998,
+      "score_breakdown": {
+        "opportunity_patients": 77,
+        "ngs_gap_factor": 0.748,
+        "incumbent_weight": 1.25,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this NSCLC practice using FMI, the headline on ctDNA for EGFR and ALK resistance when tissue is QNS makes Tempus xF+ and xF relevant to discuss.",
+      "has_crm": false
+    },
+    {
+      "rank": 33,
+      "npi": "1600000029",
+      "impact_score": 82.32114,
+      "score_breakdown": {
+        "opportunity_patients": 87,
+        "ngs_gap_factor": 0.748,
+        "incumbent_weight": 1.1,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this NSCLC practice using an in-house lab, the headline on ctDNA for EGFR and ALK resistance when tissue is QNS makes Tempus xF+ and xF relevant to discuss.",
+      "has_crm": false
+    },
+    {
+      "rank": 34,
+      "npi": "1600000040",
+      "impact_score": 80.14349999999999,
+      "score_breakdown": {
+        "opportunity_patients": 69,
+        "ngs_gap_factor": 0.8079999999999999,
+        "incumbent_weight": 1.25,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this gynecologic practice using Guardant, the HRD and PARP-decision headline makes Tempus HRD relevant to discuss.",
+      "has_crm": false
+    },
+    {
+      "rank": 35,
+      "npi": "1600000025",
+      "impact_score": 79.910625,
+      "score_breakdown": {
+        "opportunity_patients": 109,
+        "ngs_gap_factor": 0.85,
+        "incumbent_weight": 0.75,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this prostate practice already using Tempus, the headline on prostate NGS and HRR genes creates an opportunity to review Tempus xT CDx in the context of current testing.",
+      "has_crm": false
+    },
+    {
+      "rank": 36,
+      "npi": "1600000015",
+      "impact_score": 79.12287500000001,
+      "score_breakdown": {
+        "opportunity_patients": 73,
+        "ngs_gap_factor": 0.754,
+        "incumbent_weight": 1.25,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this NSCLC practice using Caris, the headline on ctDNA for EGFR and ALK resistance when tissue is QNS makes Tempus xF+ and xF relevant to discuss.",
+      "has_crm": false
+    },
+    {
+      "rank": 37,
+      "npi": "1600000050",
+      "impact_score": 79.12287500000001,
+      "score_breakdown": {
+        "opportunity_patients": 73,
+        "ngs_gap_factor": 0.754,
+        "incumbent_weight": 1.25,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this NSCLC practice using FMI, the headline on ctDNA for EGFR and ALK resistance when tissue is QNS makes Tempus xF+ and xF relevant to discuss.",
+      "has_crm": false
+    },
+    {
+      "rank": 38,
+      "npi": "1600000033",
+      "impact_score": 78.95324999999998,
+      "score_breakdown": {
+        "opportunity_patients": 69,
+        "ngs_gap_factor": 0.7959999999999999,
+        "incumbent_weight": 1.25,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this gynecologic practice using Caris, the HRD and PARP-decision headline makes Tempus HRD relevant to discuss.",
+      "has_crm": false
+    },
+    {
+      "rank": 39,
+      "npi": "1600000012",
+      "impact_score": 77.31334999999997,
+      "score_breakdown": {
+        "opportunity_patients": 74,
+        "ngs_gap_factor": 0.7899999999999999,
+        "incumbent_weight": 1.15,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this gynecologic practice, the HRD and PARP-decision headline makes Tempus HRD relevant to discuss.",
+      "has_crm": false
+    },
+    {
+      "rank": 40,
+      "npi": "1600000022",
+      "impact_score": 77.234,
+      "score_breakdown": {
+        "opportunity_patients": 73,
+        "ngs_gap_factor": 0.736,
+        "incumbent_weight": 1.25,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this NSCLC practice using Guardant, the headline on ctDNA for EGFR and ALK resistance when tissue is QNS makes Tempus xF+ and xF relevant to discuss.",
+      "has_crm": false
+    },
+    {
+      "rank": 41,
+      "npi": "1600000036",
+      "impact_score": 76.26857499999998,
+      "score_breakdown": {
+        "opportunity_patients": 79,
+        "ngs_gap_factor": 0.73,
+        "incumbent_weight": 1.15,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this NSCLC practice, the headline on ctDNA for EGFR and ALK resistance when tissue is QNS makes Tempus xF+ and xF relevant to discuss.",
+      "has_crm": false
+    },
+    {
+      "rank": 42,
+      "npi": "1600000038",
+      "impact_score": 69.79924999999999,
+      "score_breakdown": {
+        "opportunity_patients": 61,
+        "ngs_gap_factor": 0.7959999999999999,
+        "incumbent_weight": 1.25,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this gynecologic practice using FMI, the HRD and PARP-decision headline makes Tempus HRD relevant to discuss.",
+      "has_crm": false
+    },
+    {
+      "rank": 43,
+      "npi": "1600000047",
+      "impact_score": 68.95515,
+      "score_breakdown": {
+        "opportunity_patients": 69,
+        "ngs_gap_factor": 0.7899999999999999,
+        "incumbent_weight": 1.1,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this gynecologic practice using an in-house lab, the HRD and PARP-decision headline makes Tempus HRD relevant to discuss.",
+      "has_crm": false
+    },
+    {
+      "rank": 44,
+      "npi": "1600000023",
+      "impact_score": 57.395579999999995,
+      "score_breakdown": {
+        "opportunity_patients": 57,
+        "ngs_gap_factor": 0.7959999999999999,
+        "incumbent_weight": 1.1,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this gynecologic practice using an in-house lab, the HRD and PARP-decision headline makes Tempus HRD relevant to discuss.",
+      "has_crm": false
+    },
+    {
+      "rank": 45,
+      "npi": "1600000031",
+      "impact_score": 47.473724999999995,
+      "score_breakdown": {
+        "opportunity_patients": 73,
+        "ngs_gap_factor": 0.754,
+        "incumbent_weight": 0.75,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this CRC practice already using Tempus, the xT CDx companion-diagnostic headline creates an opportunity to review Tempus xT CDx in the context of current testing.",
+      "has_crm": false
+    },
+    {
+      "rank": 46,
+      "npi": "1600000037",
+      "impact_score": 46.540499999999994,
+      "score_breakdown": {
+        "opportunity_patients": 71,
+        "ngs_gap_factor": 0.7599999999999999,
+        "incumbent_weight": 0.75,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this breast practice already using Tempus, the HER2-low and ultralow therapy-selection headline creates an opportunity to review Tempus HER2 IHC and xT CDx in the context of current testing.",
+      "has_crm": false
+    },
+    {
+      "rank": 47,
+      "npi": "1600000007",
+      "impact_score": 46.17755999999999,
+      "score_breakdown": {
+        "opportunity_patients": 117,
+        "ngs_gap_factor": 0.832,
+        "incumbent_weight": 0.75,
+        "event_boost": 1.15,
+        "crm_multiplier": 0.55
+      },
+      "readiness": "retain",
+      "concern": "Needs better operational follow-through on pending cases.",
+      "interest": "Operational support rather than a new assay pitch.",
+      "why_now": "For this mixed-tumor practice already using Tempus, the stated need is operational follow-through on pending cases rather than a new assay pitch, so the conversation should focus on support across its existing Tempus xF+, xF, xT CDx, HER2 IHC, HRD, and xT testing.",
+      "has_crm": true
+    },
+    {
+      "rank": 48,
+      "npi": "1600000049",
+      "impact_score": 45.80564999999999,
+      "score_breakdown": {
+        "opportunity_patients": 71,
+        "ngs_gap_factor": 0.748,
+        "incumbent_weight": 0.75,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this NSCLC practice already using Tempus, the headline on ctDNA for EGFR and ALK resistance when tissue is QNS creates an opportunity to review Tempus xF+ and xF in the context of current testing.",
+      "has_crm": false
+    },
+    {
+      "rank": 49,
+      "npi": "1600000019",
+      "impact_score": 41.934749999999994,
+      "score_breakdown": {
+        "opportunity_patients": 65,
+        "ngs_gap_factor": 0.748,
+        "incumbent_weight": 0.75,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this NSCLC practice already using Tempus, the headline on ctDNA for EGFR and ALK resistance when tissue is QNS creates an opportunity to review Tempus xF+ and xF in the context of current testing.",
+      "has_crm": false
+    },
+    {
+      "rank": 50,
+      "npi": "1600000001",
+      "impact_score": 40.799699999999994,
+      "score_breakdown": {
+        "opportunity_patients": 54,
+        "ngs_gap_factor": 0.73,
+        "incumbent_weight": 0.75,
+        "event_boost": 1.15,
+        "crm_multiplier": 1.2
+      },
+      "readiness": "expand",
+      "concern": "No concern stated.",
+      "interest": "Add liquid testing at progression rather than waiting for a new biopsy.",
+      "why_now": "For this NSCLC practice already using Tempus, the provider wants to add liquid testing at progression rather than wait for a new biopsy, making Tempus xF+ and xF timely to discuss for that use.",
+      "has_crm": true
+    },
+    {
+      "rank": 51,
+      "npi": "1600000013",
+      "impact_score": 37.073699999999995,
+      "score_breakdown": {
+        "opportunity_patients": 54,
+        "ngs_gap_factor": 0.7959999999999999,
+        "incumbent_weight": 0.75,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this gynecologic practice already using Tempus, the HRD and PARP-decision headline creates an opportunity to review Tempus HRD in the context of current testing.",
+      "has_crm": false
+    },
+    {
+      "rank": 52,
+      "npi": "1600000043",
+      "impact_score": 27.461999999999993,
+      "score_breakdown": {
+        "opportunity_patients": 40,
+        "ngs_gap_factor": 0.7959999999999999,
+        "incumbent_weight": 0.75,
+        "event_boost": 1.15,
+        "crm_multiplier": 1
+      },
+      "readiness": "unknown",
+      "concern": "",
+      "interest": "",
+      "why_now": "For this gynecologic practice already using Tempus, the HRD and PARP-decision headline creates an opportunity to review Tempus HRD in the context of current testing.",
+      "has_crm": false
+    }
+  ]
+}

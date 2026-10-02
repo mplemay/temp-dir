@@ -9,7 +9,8 @@
     "preview": "vp preview",
     "prepare": "vp config",
     "postinstall": "skills experimental_sync -y",
-    "skills:sync": "skills experimental_sync -y"
+    "skills:sync": "skills experimental_sync -y",
+    "rank-providers": "tsx scripts/rank-providers.ts"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",
@@ -38,7 +39,9 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@vitejs/plugin-react": "^6",
+    "openai": "^7.25.0",
     "skills": "^1.7.0",
+    "tsx": "^4.23.15",
     "typescript": "~6.0.2",
     "vite": "catalog:",
     "vite-plus": "catalog:"
