@@ -1,6 +1,20 @@
-import { defineConfig } from "vite-plus";
+import { defineConfig, lazyPlugins } from "vite-plus";
 
 export default defineConfig({
+  server: {
+    port: 3000,
+  },
+  resolve: {
+    tsconfigPaths: true,
+  },
+  plugins: lazyPlugins(async () => {
+    const { default: tailwindcss } = await import("@tailwindcss/vite");
+    const { tanstackStart } = await import("@tanstack/react-start/plugin/vite");
+    const { default: viteReact } = await import("@vitejs/plugin-react");
+    const { devtools } = await import("@tanstack/devtools-vite");
+
+    return [devtools(), tailwindcss(), tanstackStart(), viteReact()];
+  }),
   staged: {
     "*": "vp check --fix",
   },

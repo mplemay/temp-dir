@@ -11,6 +11,12 @@ node_modules
 dist
 dist-ssr
 *.local
+.nitro
+.tanstack
+.wrangler
+.output
+.vinxi
+*.tsbuildinfo
 
 # Editor directories and files
 .vscode/*
