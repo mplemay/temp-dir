@@ -1,3 +1,4 @@
+import { nitro } from "nitro/vite";
 import { defineConfig, lazyPlugins } from "vite-plus";
 
 export default defineConfig({
@@ -13,7 +14,15 @@ export default defineConfig({
     const { default: viteReact } = await import("@vitejs/plugin-react");
     const { devtools } = await import("@tanstack/devtools-vite");
 
-    return [devtools(), tailwindcss(), tanstackStart(), viteReact()];
+    return [
+      devtools(),
+      tailwindcss(),
+      tanstackStart(),
+      nitro({
+        serverAssets: [{ baseName: "data", dir: "./src/data" }],
+      }),
+      viteReact(),
+    ];
   }),
   staged: {
     "*": "vp check --fix",

@@ -62,32 +62,37 @@ function isFixtureDirectory(path: string): boolean {
   return existsSync(path) && statSync(path).isDirectory();
 }
 
-export function loadProductKnowledge(directory: string = defaultFixtureDir): LoadResult {
-  if (!isFixtureDirectory(directory)) {
-    throw new MissingFixtureError(directory);
-  }
+export type AssayDocument = {
+  source: string;
+  text: string;
+};
 
-  const files = readdirSync(directory)
-    .filter((name) => name.endsWith(".md"))
-    .sort((left, right) => left.localeCompare(right));
+function documentName(source: string): string {
+  const parts = source.split(/[/\\]/);
+  return parts[parts.length - 1] ?? source;
+}
 
+export function parseProductKnowledgeDocuments(documents: AssayDocument[]): LoadResult {
   const assays: AcceptedAssay[] = [];
   const skipped: SkipRecord[] = [];
   const seenIds = new Set<string>();
 
-  for (const name of files) {
-    const source = join(directory, name);
-    const parsed = matter(readFileSync(source, "utf8"));
+  const ordered = [...documents].sort((left, right) =>
+    documentName(left.source).localeCompare(documentName(right.source)),
+  );
+
+  for (const document of ordered) {
+    const parsed = matter(document.text);
     const result = assayDocumentSchema.safeParse({
       ...parsed.data,
       body: parsed.content,
     });
     if (!result.success) {
-      skipped.push({ source, reason: formatZodIssue(result.error) });
+      skipped.push({ source: document.source, reason: formatZodIssue(result.error) });
       continue;
     }
     if (seenIds.has(result.data.test_id)) {
-      skipped.push({ source, reason: "test_id: duplicate" });
+      skipped.push({ source: document.source, reason: "test_id: duplicate" });
       continue;
     }
     seenIds.add(result.data.test_id);
@@ -101,4 +106,18 @@ export function loadProductKnowledge(directory: string = defaultFixtureDir): Loa
       skipped,
     },
   };
+}
+
+export function loadProductKnowledge(directory: string = defaultFixtureDir): LoadResult {
+  if (!isFixtureDirectory(directory)) {
+    throw new MissingFixtureError(directory);
+  }
+
+  const files = readdirSync(directory).filter((name) => name.endsWith(".md"));
+  return parseProductKnowledgeDocuments(
+    files.map((name) => ({
+      source: join(directory, name),
+      text: readFileSync(join(directory, name), "utf8"),
+    })),
+  );
 }
