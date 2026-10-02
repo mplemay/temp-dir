@@ -1,4 +1,6 @@
 import { readFileSync } from "node:fs";
+import { join } from "node:path";
+import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vite-plus/test";
 import { loadCrmNotes } from "../crm-notes/load";
 import {
@@ -37,5 +39,25 @@ describe("committed provider-briefs fixture", () => {
     expect(readFileSync(defaultArtifactPath, "utf8")).toContain('"meeting_script"');
     expect(ranked.providers.every((row) => !("meeting_script" in row))).toBe(true);
     expect(ranked.providers.every((row) => !("objection_response" in row))).toBe(true);
+  });
+
+  it("loads a non-empty Quinn Chen objection from the committed artifact", () => {
+    const loaded = loadProviderBriefs();
+    const quinn = loaded.briefs.find((row) => row.npi === "1600000004");
+    expect(quinn?.objection_response.trim().length).toBeGreaterThan(0);
+    expect(quinn?.objection_response).toMatch(/6-day|6 day/i);
+  });
+
+  it("composes the brief page without cards and keeps the empty-concern copy", () => {
+    const source = readFileSync(
+      join(fileURLToPath(new URL("../../routes/providers/$npi.tsx", import.meta.url))),
+      "utf8",
+    );
+    expect(source).not.toMatch("@/components/ui/card");
+    expect(source).toMatch("@/components/ui/table");
+    expect(source).toMatch("@/components/ui/badge");
+    expect(source).toMatch("@/components/ui/separator");
+    expect(source).toMatch("No known concern was recorded for this provider.");
+    expect(source).not.toMatch(/drafted objection/i);
   });
 });

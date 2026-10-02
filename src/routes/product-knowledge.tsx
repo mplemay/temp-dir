@@ -1,7 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { getProductKnowledge } from "@/lib/browse/server";
+import { unpublishedMetric } from "@/lib/browse/display";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 
 export const Route = createFileRoute("/product-knowledge")({
   loader: () => getProductKnowledge(),
@@ -26,31 +34,32 @@ function ProductKnowledgePage() {
           Accepted assays from the committed product-knowledge feed.
         </p>
       </div>
-      <div className="grid gap-4 md:grid-cols-2">
-        {assays.map((assay) => (
-          <Card key={assay.test_id}>
-            <CardHeader>
-              <CardTitle>{assay.display_name}</CardTitle>
-              <CardDescription className="flex flex-wrap gap-2">
+      <Table>
+        <TableHeader>
+          <TableRow>
+            <TableHead>Assay</TableHead>
+            <TableHead>Specimen</TableHead>
+            <TableHead>Regulatory status</TableHead>
+            <TableHead>TAT days</TableHead>
+            <TableHead>Gene count</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {assays.map((assay) => (
+            <TableRow key={assay.test_id}>
+              <TableCell className="font-medium">{assay.display_name}</TableCell>
+              <TableCell>
                 <Badge variant="secondary">{assay.specimen}</Badge>
+              </TableCell>
+              <TableCell>
                 <Badge variant="outline">{formatStatus(assay.regulatory_status)}</Badge>
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="flex flex-col gap-1">
-              {assay.tat_days === null ? (
-                <p className="text-muted-foreground">Turnaround unpublished</p>
-              ) : (
-                <p>Turnaround {assay.tat_days} days</p>
-              )}
-              {assay.gene_count === null ? (
-                <p className="text-muted-foreground">Gene count unpublished</p>
-              ) : (
-                <p>Gene count {assay.gene_count}</p>
-              )}
-            </CardContent>
-          </Card>
-        ))}
-      </div>
+              </TableCell>
+              <TableCell>{unpublishedMetric(assay.tat_days)}</TableCell>
+              <TableCell>{unpublishedMetric(assay.gene_count)}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
     </div>
   );
 }

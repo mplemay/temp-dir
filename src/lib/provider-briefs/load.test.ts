@@ -85,6 +85,7 @@ describe("loadProviderBriefs", () => {
     expect(loaded.briefs[0]?.full_name).toBe("Avery Chen");
     expect(loaded.briefs[0]?.specialty).toBe("Medical Oncology");
     expect(loaded.briefs[0]?.city).toBe("Chicago");
+    expect(loaded.briefs[0]?.impact_score).toBe(120.5);
     expect(loaded.briefs[1]?.meeting_script).toMatch(/HER2-low/);
   });
 

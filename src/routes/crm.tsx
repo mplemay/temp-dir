@@ -1,6 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { getCrmNotes } from "@/lib/browse/server";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 
 export const Route = createFileRoute("/crm")({
   loader: () => getCrmNotes(),
@@ -21,19 +28,24 @@ function CrmPage() {
           Prior interaction notes from the committed CRM feed.
         </p>
       </div>
-      <div className="flex flex-col gap-4">
-        {notes.map((note) => (
-          <Card key={`${note.npi}-${note.note_date}-${note.body}`}>
-            <CardHeader>
-              <CardTitle>{note.clinician_name ?? note.npi}</CardTitle>
-              <CardDescription>{note.note_date}</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p>{note.body}</p>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
+      <Table>
+        <TableHeader>
+          <TableRow>
+            <TableHead>Date</TableHead>
+            <TableHead>Clinician</TableHead>
+            <TableHead>Note</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {notes.map((note) => (
+            <TableRow key={`${note.npi}-${note.note_date}-${note.body}`}>
+              <TableCell>{note.note_date}</TableCell>
+              <TableCell>{note.clinician_name ?? note.npi}</TableCell>
+              <TableCell className="whitespace-normal">{note.body}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
     </div>
   );
 }

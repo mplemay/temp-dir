@@ -1,7 +1,16 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
 import { getProviderBrief } from "@/lib/browse/server";
+import { unpublishedMetric } from "@/lib/browse/display";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 
 export const Route = createFileRoute("/providers/$npi")({
   loader: async ({ params }) => {
@@ -28,79 +37,126 @@ function ProviderBriefPage() {
         <p className="text-muted-foreground">
           {brief.org_name} · {brief.specialty} · {brief.city}, {brief.state}
         </p>
-        <div>
+        <div className="flex flex-wrap items-center gap-2">
           <Badge variant="secondary">{brief.incumbent_lab}</Badge>
+          <Badge variant="outline">{brief.readiness}</Badge>
+          <Badge variant="outline">{brief.primary_tumor_focus}</Badge>
         </div>
       </div>
-      <Card>
-        <CardHeader>
-          <CardTitle>Overview</CardTitle>
-          <CardDescription>
-            {brief.primary_tumor_focus} · {brief.opportunity_patients} opportunity patients
-          </CardDescription>
-        </CardHeader>
-        <CardContent className="flex flex-col gap-4">
-          <div>
-            <h2 className="font-medium">Why now</h2>
+      <div className="grid gap-8 lg:grid-cols-2">
+        <section className="flex flex-col gap-4">
+          <div className="flex flex-col gap-2">
+            <h2 className="font-heading text-lg font-medium">Meeting script</h2>
+            <p className="text-muted-foreground">30-second pitch for this visit.</p>
+            <p>{brief.meeting_script}</p>
+          </div>
+          <Separator />
+          <div className="flex flex-col gap-2">
+            <h2 className="font-heading text-lg font-medium">Objection handler</h2>
+            {brief.objection_response ? (
+              <>
+                <p className="text-muted-foreground">Drafted reply to a known concern.</p>
+                <p>{brief.objection_response}</p>
+              </>
+            ) : (
+              <p className="text-muted-foreground">
+                No known concern was recorded for this provider.
+              </p>
+            )}
+          </div>
+        </section>
+        <section className="flex flex-col gap-4">
+          <div className="flex flex-col gap-2">
+            <h2 className="font-heading text-lg font-medium">Why now</h2>
             <p className="text-muted-foreground">{brief.why_now}</p>
           </div>
+          <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 text-sm">
+            <dt className="text-muted-foreground">Rank</dt>
+            <dd>{brief.rank}</dd>
+            <dt className="text-muted-foreground">Impact score</dt>
+            <dd>{brief.impact_score}</dd>
+            <dt className="text-muted-foreground">Opportunity patients</dt>
+            <dd>{brief.opportunity_patients}</dd>
+            {brief.interest ? (
+              <>
+                <dt className="text-muted-foreground">Interest</dt>
+                <dd>{brief.interest}</dd>
+              </>
+            ) : null}
+            {brief.concern ? (
+              <>
+                <dt className="text-muted-foreground">Concern</dt>
+                <dd>{brief.concern}</dd>
+              </>
+            ) : null}
+          </dl>
           {brief.matched_events.length > 0 ? (
-            <div>
-              <h2 className="font-medium">Matched events</h2>
-              <ul className="flex flex-col gap-1 text-muted-foreground">
-                {brief.matched_events.map((event) => (
-                  <li key={`${event.event_date}-${event.headline}`}>
-                    {event.headline} ({event.tumor_type})
-                  </li>
-                ))}
-              </ul>
+            <div className="flex flex-col gap-2">
+              <h3 className="font-medium">Matched events</h3>
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead>Headline</TableHead>
+                    <TableHead>Tumor type</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {brief.matched_events.map((event) => (
+                    <TableRow key={`${event.event_date}-${event.headline}`}>
+                      <TableCell className="whitespace-normal">{event.headline}</TableCell>
+                      <TableCell>{event.tumor_type}</TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
             </div>
           ) : null}
           {brief.assays.length > 0 ? (
-            <div>
-              <h2 className="font-medium">Related assays</h2>
-              <p className="text-muted-foreground">
-                {brief.assays.map((assay) => assay.display_name).join(", ")}
-              </p>
+            <div className="flex flex-col gap-2">
+              <h3 className="font-medium">Related assays</h3>
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead>Assay</TableHead>
+                    <TableHead>TAT days</TableHead>
+                    <TableHead>Gene count</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {brief.assays.map((assay) => (
+                    <TableRow key={assay.display_name}>
+                      <TableCell>{assay.display_name}</TableCell>
+                      <TableCell>{unpublishedMetric(assay.tat_days)}</TableCell>
+                      <TableCell>{unpublishedMetric(assay.gene_count)}</TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
             </div>
           ) : null}
-          {brief.crm_notes.length > 0 ? (
-            <div>
-              <h2 className="font-medium">CRM notes</h2>
-              <ul className="flex flex-col gap-2">
-                {brief.crm_notes.map((note) => (
-                  <li key={`${note.note_date}-${note.body}`}>
-                    <p className="text-muted-foreground">{note.note_date}</p>
-                    <p>{note.body}</p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ) : null}
-        </CardContent>
-      </Card>
-      <Card>
-        <CardHeader>
-          <CardTitle>Meeting script</CardTitle>
-          <CardDescription>30-second pitch for this visit.</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <p>{brief.meeting_script}</p>
-        </CardContent>
-      </Card>
-      {brief.objection_response ? (
-        <Card>
-          <CardHeader>
-            <CardTitle>Objection handler</CardTitle>
-            <CardDescription>Drafted reply to a known concern.</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <p>{brief.objection_response}</p>
-          </CardContent>
-        </Card>
-      ) : (
-        <p className="text-muted-foreground">No known concern was recorded for this provider.</p>
-      )}
+        </section>
+      </div>
+      {brief.crm_notes.length > 0 ? (
+        <section className="flex flex-col gap-2">
+          <h2 className="font-heading text-lg font-medium">CRM notes</h2>
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead>Date</TableHead>
+                <TableHead>Note</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {brief.crm_notes.map((note) => (
+                <TableRow key={`${note.note_date}-${note.body}`}>
+                  <TableCell>{note.note_date}</TableCell>
+                  <TableCell className="whitespace-normal">{note.body}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </section>
+      ) : null}
     </div>
   );
 }

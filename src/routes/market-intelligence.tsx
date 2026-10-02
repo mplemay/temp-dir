@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { getMarketIntelligence } from "@/lib/browse/server";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Table,
   TableBody,
@@ -54,20 +53,26 @@ function MarketIntelligencePage() {
           ))}
         </TableBody>
       </Table>
-      <Card>
-        <CardHeader>
-          <CardTitle>Market events</CardTitle>
-          <CardDescription>Why-now hooks by tumor type.</CardDescription>
-        </CardHeader>
-        <CardContent className="flex flex-col gap-3">
-          {events.map((event) => (
-            <div key={event.event_id} className="flex flex-col gap-1">
-              <p className="font-medium">{event.headline}</p>
-              <p className="text-muted-foreground">{event.tumor_type}</p>
-            </div>
-          ))}
-        </CardContent>
-      </Card>
+      <div className="flex flex-col gap-2">
+        <h2 className="font-heading text-lg font-medium">Market events</h2>
+        <p className="text-muted-foreground">Why-now hooks by tumor type.</p>
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHead>Headline</TableHead>
+              <TableHead>Tumor type</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {events.map((event) => (
+              <TableRow key={event.event_id}>
+                <TableCell className="whitespace-normal">{event.headline}</TableCell>
+                <TableCell>{event.tumor_type}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </div>
     </div>
   );
 }

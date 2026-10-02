@@ -58,6 +58,7 @@ export type ProviderBriefView = BriefRow & {
   primary_tumor_focus: AcceptedProvider["primary_tumor_focus"];
   incumbent_lab: AcceptedProvider["incumbent_lab"];
   rank: number;
+  impact_score: number;
   opportunity_patients: number;
   why_now: string;
   concern: string;
@@ -128,6 +129,7 @@ function joinBrief(
     primary_tumor_focus: ranked.primary_tumor_focus,
     incumbent_lab: ranked.incumbent_lab,
     rank: ranked.rank,
+    impact_score: ranked.impact_score,
     opportunity_patients: ranked.opportunity_patients,
     why_now: ranked.why_now,
     concern: ranked.concern,

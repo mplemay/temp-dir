@@ -19,3 +19,7 @@ export function notesWithClinicianNames(
     clinician_name: namesByNpi.get(note.npi) ?? null,
   }));
 }
+
+export function unpublishedMetric(value: number | null): string {
+  return value === null ? "" : String(value);
+}
