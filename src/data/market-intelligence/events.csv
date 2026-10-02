@@ -1,0 +1,7 @@
+event_id,tumor_type,event_date,headline,relevant_tests,why_now
+nsclc_liquid,NSCLC,2024-01-15,ctDNA for EGFR and ALK resistance when tissue is QNS,xF/xF+,Progression on TKI or insufficient tissue is a reason to add liquid alongside tissue
+crc_xt_cdx,CRC,2024-04-26,xT CDx companion diagnostic claims for colorectal cancer,xT CDx,FDA CDx indication for CRC rather than LDT-only tumor profiling
+breast_her2_low,breast,2024-08-12,HER2-low and ultralow IHC now changes therapy selection,xT CDx; HER2 IHC,Guideline and label expansion makes reflex HER2 assessment material for metastatic breast visits
+gyn_hrd,gyn,2025-02-03,HRD and homologous-recombination findings to guide PARP decisions,xT CDx; HRD,Gyn oncology visits should confirm HRD status before later-line therapy
+prostate_ngs_gap,prostate,2025-06-18,Prostate NGS still lags lung and should include HRR genes,xT CDx,Community prostate volumes remain undertested relative to NSCLC
+heme_xt_tumor_only,heme,2025-09-09,Tumor-only xT panel for hematologic malignancies,xT,Heme orders need the tumor-only path rather than solid-tumor plus normal match

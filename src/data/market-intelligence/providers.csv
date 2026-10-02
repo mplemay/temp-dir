@@ -1,0 +1,53 @@
+npi,full_name,specialty,org_name,org_type,health_system,city,state,primary_tumor_focus,est_new_cancer_patients_annual,est_advanced_solid_tumor_annual,est_ngs_testing_rate,incumbent_lab,tempus_orders_t12m,volume_basis,volume_confidence,reserved_for_crm
+1600000001,Avery Chen,Medical Oncology,Northwestern Memorial Hospital,academic,Northwestern Medicine,Chicago,IL,NSCLC,150,83,0.9,Tempus,29,practice_type_model,high,true
+1600000002,Jordan Chen,Hematology/Oncology,UChicago Medicine,nci_designated,University of Chicago,Chicago,IL,breast,218,120,0.86,FMI,14,practice_type_model,medium,true
+1600000003,Riley Chen,Gynecologic Oncology,Rush University Medical Center,academic,Rush,Chicago,IL,gyn,126,69,0.68,Caris,8,practice_type_model,low,true
+1600000004,Quinn Chen,Thoracic Oncology,Loyola University Medical Center,academic,Loyola Medicine,Maywood,IL,NSCLC,174,96,0.84,Guardant,12,practice_type_model,high,true
+1600000005,Morgan Chen,Surgical Oncology,Advocate Christ Medical Center,community_hospital,Advocate Health,Oak Lawn,IL,gyn,142,78,0.64,in_house,9,practice_type_model,medium,true
+1600000006,Casey Chen,Medical Oncology,Evanston Hospital,community_hospital,Endeavor Health,Evanston,IL,heme,320,112,0.58,unknown,6,practice_type_model,low,true
+1600000007,Harper Chen,Hematology/Oncology,Ascension Saint Joseph,community_hospital,Ascension,Chicago,IL,mixed,328,180,0.56,Tempus,63,practice_type_model,high,true
+1600000008,Drew Chen,Gynecologic Oncology,Illinois Cancer Specialists,independent_practice,Independent,Arlington Heights,IL,gyn,130,72,0.68,FMI,9,practice_type_model,medium,true
+1600000009,Skyler Chen,Thoracic Oncology,Northwest Oncology and Hematology,independent_practice,Independent,Rolling Meadows,IL,NSCLC,158,87,0.84,Caris,10,practice_type_model,low,false
+1600000010,Reese Chen,Surgical Oncology,Northwestern Memorial Hospital,academic,Northwestern Medicine,Chicago,IL,CRC,206,113,0.74,Guardant,14,practice_type_model,high,false
+1600000011,Cameron Chen,Medical Oncology,UChicago Medicine,nci_designated,University of Chicago,Chicago,IL,prostate,234,129,0.88,in_house,15,practice_type_model,medium,false
+1600000012,Parker Chen,Hematology/Oncology,Rush University Medical Center,academic,Rush,Chicago,IL,gyn,142,78,0.7,unknown,4,practice_type_model,low,false
+1600000013,Sage Chen,Gynecologic Oncology,Loyola University Medical Center,academic,Loyola Medicine,Maywood,IL,gyn,150,83,0.68,Tempus,29,practice_type_model,high,false
+1600000014,Rowan Chen,Thoracic Oncology,Advocate Christ Medical Center,community_hospital,Advocate Health,Oak Lawn,IL,NSCLC,198,109,0.84,FMI,13,practice_type_model,medium,false
+1600000015,Emery Chen,Surgical Oncology,Evanston Hospital,community_hospital,Endeavor Health,Evanston,IL,NSCLC,150,83,0.82,Caris,10,practice_type_model,low,false
+1600000016,Finley Chen,Medical Oncology,Ascension Saint Joseph,community_hospital,Ascension,Chicago,IL,breast,288,158,0.58,Guardant,19,practice_type_model,high,false
+1600000017,Hayden Chen,Hematology/Oncology,Illinois Cancer Specialists,independent_practice,Independent,Arlington Heights,IL,CRC,346,190,0.5,in_house,23,practice_type_model,medium,false
+1600000018,Peyton Chen,Gynecologic Oncology,Northwest Oncology and Hematology,independent_practice,Independent,Rolling Meadows,IL,gyn,154,85,0.68,unknown,4,practice_type_model,low,false
+1600000019,Elliot Chen,Thoracic Oncology,Northwestern Memorial Hospital,academic,Northwestern Medicine,Chicago,IL,NSCLC,182,100,0.84,Tempus,35,practice_type_model,high,false
+1600000020,Blake Chen,Surgical Oncology,UChicago Medicine,nci_designated,University of Chicago,Chicago,IL,heme,250,88,0.8,FMI,11,practice_type_model,medium,false
+1600000021,Jamie Chen,Medical Oncology,Rush University Medical Center,academic,Rush,Chicago,IL,mixed,238,131,0.82,Caris,16,practice_type_model,low,false
+1600000022,Kendall Chen,Hematology/Oncology,Loyola University Medical Center,academic,Loyola Medicine,Maywood,IL,NSCLC,150,83,0.88,Guardant,10,practice_type_model,high,false
+1600000023,Logan Chen,Gynecologic Oncology,Advocate Christ Medical Center,community_hospital,Advocate Health,Oak Lawn,IL,gyn,118,65,0.68,in_house,8,practice_type_model,medium,false
+1600000024,Sydney Chen,Thoracic Oncology,Evanston Hospital,community_hospital,Endeavor Health,Evanston,IL,NSCLC,166,91,0.84,unknown,5,practice_type_model,low,false
+1600000025,Taylor Chen,Surgical Oncology,Ascension Saint Joseph,community_hospital,Ascension,Chicago,IL,prostate,304,167,0.5,Tempus,58,practice_type_model,high,false
+1600000026,Ainsley Chen,Medical Oncology,Illinois Cancer Specialists,independent_practice,Independent,Arlington Heights,IL,gyn,162,89,0.72,FMI,11,practice_type_model,medium,false
+1600000027,Charlie Chen,Hematology/Oncology,Northwest Oncology and Hematology,independent_practice,Independent,Rolling Meadows,IL,heme,370,130,0.5,Caris,16,practice_type_model,low,false
+1600000028,Devon Chen,Gynecologic Oncology,Northwestern Memorial Hospital,academic,Northwestern Medicine,Chicago,IL,gyn,158,87,0.68,Guardant,10,practice_type_model,high,false
+1600000029,Avery Patel,Thoracic Oncology,UChicago Medicine,nci_designated,University of Chicago,Chicago,IL,NSCLC,180,99,0.84,in_house,12,practice_type_model,medium,false
+1600000030,Jordan Patel,Surgical Oncology,Rush University Medical Center,academic,Rush,Chicago,IL,breast,198,109,0.74,unknown,5,practice_type_model,low,false
+1600000031,Riley Patel,Medical Oncology,Loyola University Medical Center,academic,Loyola Medicine,Maywood,IL,CRC,206,113,0.82,Tempus,40,practice_type_model,high,false
+1600000032,Quinn Patel,Hematology/Oncology,Advocate Christ Medical Center,community_hospital,Advocate Health,Oak Lawn,IL,prostate,304,167,0.56,FMI,20,practice_type_model,medium,false
+1600000033,Morgan Patel,Gynecologic Oncology,Evanston Hospital,community_hospital,Endeavor Health,Evanston,IL,gyn,142,78,0.68,Caris,9,practice_type_model,low,false
+1600000034,Casey Patel,Thoracic Oncology,Ascension Saint Joseph,community_hospital,Ascension,Chicago,IL,NSCLC,190,105,0.84,Guardant,13,practice_type_model,high,false
+1600000035,Harper Patel,Surgical Oncology,Illinois Cancer Specialists,independent_practice,Independent,Arlington Heights,IL,mixed,378,208,0.44,in_house,25,practice_type_model,medium,false
+1600000036,Drew Patel,Medical Oncology,Northwest Oncology and Hematology,independent_practice,Independent,Rolling Meadows,IL,NSCLC,150,83,0.9,unknown,4,practice_type_model,low,false
+1600000037,Skyler Patel,Hematology/Oncology,Northwestern Memorial Hospital,academic,Northwestern Medicine,Chicago,IL,breast,198,109,0.8,Tempus,38,practice_type_model,high,false
+1600000038,Reese Patel,Gynecologic Oncology,UChicago Medicine,nci_designated,University of Chicago,Chicago,IL,gyn,126,69,0.68,FMI,8,practice_type_model,medium,false
+1600000039,Cameron Patel,Thoracic Oncology,Rush University Medical Center,academic,Rush,Chicago,IL,NSCLC,174,96,0.84,Caris,12,practice_type_model,low,false
+1600000040,Parker Patel,Surgical Oncology,Loyola University Medical Center,academic,Loyola Medicine,Maywood,IL,gyn,142,78,0.64,Guardant,9,practice_type_model,high,false
+1600000041,Sage Patel,Medical Oncology,Advocate Christ Medical Center,community_hospital,Advocate Health,Oak Lawn,IL,heme,320,112,0.58,in_house,13,practice_type_model,medium,false
+1600000042,Rowan Patel,Hematology/Oncology,Evanston Hospital,community_hospital,Endeavor Health,Evanston,IL,mixed,328,180,0.56,unknown,9,practice_type_model,low,false
+1600000043,Emery Patel,Gynecologic Oncology,Ascension Saint Joseph,community_hospital,Ascension,Chicago,IL,gyn,110,61,0.68,Tempus,21,practice_type_model,high,false
+1600000044,Finley Patel,Thoracic Oncology,Illinois Cancer Specialists,independent_practice,Independent,Arlington Heights,IL,NSCLC,158,87,0.84,FMI,10,practice_type_model,medium,false
+1600000045,Hayden Patel,Surgical Oncology,Northwest Oncology and Hematology,independent_practice,Independent,Rolling Meadows,IL,CRC,346,190,0.44,Caris,23,practice_type_model,low,false
+1600000046,Peyton Patel,Medical Oncology,Northwestern Memorial Hospital,academic,Northwestern Medicine,Chicago,IL,prostate,214,118,0.82,Guardant,14,practice_type_model,high,false
+1600000047,Elliot Patel,Hematology/Oncology,UChicago Medicine,nci_designated,University of Chicago,Chicago,IL,gyn,142,78,0.7,in_house,9,practice_type_model,medium,false
+1600000048,Blake Patel,Gynecologic Oncology,Rush University Medical Center,academic,Rush,Chicago,IL,gyn,150,83,0.68,unknown,4,practice_type_model,low,false
+1600000049,Jamie Patel,Thoracic Oncology,Loyola University Medical Center,academic,Loyola Medicine,Maywood,IL,NSCLC,198,109,0.84,Tempus,38,practice_type_model,high,false
+1600000050,Kendall Patel,Surgical Oncology,Advocate Christ Medical Center,community_hospital,Advocate Health,Oak Lawn,IL,NSCLC,150,83,0.82,FMI,10,practice_type_model,medium,false
+1600000051,Logan Patel,Medical Oncology,Evanston Hospital,community_hospital,Endeavor Health,Evanston,IL,breast,288,158,0.58,Caris,19,practice_type_model,low,false
+1600000052,Sydney Patel,Hematology/Oncology,Ascension Saint Joseph,community_hospital,Ascension,Chicago,IL,CRC,296,163,0.56,Guardant,20,practice_type_model,high,false
