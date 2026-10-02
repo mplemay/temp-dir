@@ -18,5 +18,5 @@
 ## 4. Deployment
 
 - [x] 4.1 Run `vp build` and verify it finishes. A Node `.output` is acceptable locally. Do not treat that as proof of the Vercel preset
-- [ ] 4.2 Push the repo changes to `main`, import `mplemay/temp-dir` into the existing Vercel team, and verify the project preset is TanStack Start. If the install log is not pnpm `12.8.1`, set `installCommand` to Corepack prepare `pnpm@12.8.1` then `pnpm install` and redeploy. If the preset is Vite, set the framework to `tanstack-start` without an output directory and redeploy
-- [ ] 4.3 With no application environment variables set, open the production deployment and verify `/` HTML includes a ranked provider name without JavaScript, a brief URL for a committed NPI is that brief page rather than a platform 404, and the product-knowledge page lists a committed assay
+- [x] 4.2 Push the repo changes to `main`, import `mplemay/temp-dir` into the existing Vercel team, and verify the project preset is TanStack Start. If the install log is not pnpm `12.8.1`, set `installCommand` to Corepack prepare `pnpm@12.8.1` then `pnpm install` and redeploy. If the preset is Vite, set the framework to `tanstack-start` without an output directory and redeploy
+- [x] 4.3 With no application environment variables set, open the production deployment and verify `/` HTML includes a ranked provider name without JavaScript, a brief URL for a committed NPI is that brief page rather than a platform 404, and the product-knowledge page lists a committed assay
