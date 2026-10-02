@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as CrmRouteImport } from './routes/crm'
 import { Route as MarketIntelligenceRouteImport } from './routes/market-intelligence'
 import { Route as ProductKnowledgeRouteImport } from './routes/product-knowledge'
+import { Route as ProvidersNpiRouteImport } from './routes/providers/$npi'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -34,18 +35,25 @@ const ProductKnowledgeRoute = ProductKnowledgeRouteImport.update({
   path: '/product-knowledge',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProvidersNpiRoute = ProvidersNpiRouteImport.update({
+  id: '/providers/$npi',
+  path: '/providers/$npi',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/crm': typeof CrmRoute
   '/market-intelligence': typeof MarketIntelligenceRoute
   '/product-knowledge': typeof ProductKnowledgeRoute
+  '/providers/$npi': typeof ProvidersNpiRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/crm': typeof CrmRoute
   '/market-intelligence': typeof MarketIntelligenceRoute
   '/product-knowledge': typeof ProductKnowledgeRoute
+  '/providers/$npi': typeof ProvidersNpiRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -53,13 +61,30 @@ export interface FileRoutesById {
   '/crm': typeof CrmRoute
   '/market-intelligence': typeof MarketIntelligenceRoute
   '/product-knowledge': typeof ProductKnowledgeRoute
+  '/providers/$npi': typeof ProvidersNpiRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/crm' | '/market-intelligence' | '/product-knowledge'
+  fullPaths:
+    | '/'
+    | '/crm'
+    | '/market-intelligence'
+    | '/product-knowledge'
+    | '/providers/$npi'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/crm' | '/market-intelligence' | '/product-knowledge'
-  id: '__root__' | '/' | '/crm' | '/market-intelligence' | '/product-knowledge'
+  to:
+    | '/'
+    | '/crm'
+    | '/market-intelligence'
+    | '/product-knowledge'
+    | '/providers/$npi'
+  id:
+    | '__root__'
+    | '/'
+    | '/crm'
+    | '/market-intelligence'
+    | '/product-knowledge'
+    | '/providers/$npi'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -67,6 +92,7 @@ export interface RootRouteChildren {
   CrmRoute: typeof CrmRoute
   MarketIntelligenceRoute: typeof MarketIntelligenceRoute
   ProductKnowledgeRoute: typeof ProductKnowledgeRoute
+  ProvidersNpiRoute: typeof ProvidersNpiRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -99,6 +125,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProductKnowledgeRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/providers/$npi': {
+      id: '/providers/$npi'
+      path: '/providers/$npi'
+      fullPath: '/providers/$npi'
+      preLoaderRoute: typeof ProvidersNpiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -107,6 +140,7 @@ const rootRouteChildren: RootRouteChildren = {
   CrmRoute: CrmRoute,
   MarketIntelligenceRoute: MarketIntelligenceRoute,
   ProductKnowledgeRoute: ProductKnowledgeRoute,
+  ProvidersNpiRoute: ProvidersNpiRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

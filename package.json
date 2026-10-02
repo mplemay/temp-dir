@@ -10,7 +10,8 @@
     "prepare": "vp config",
     "postinstall": "skills experimental_sync -y",
     "skills:sync": "skills experimental_sync -y",
-    "rank-providers": "tsx scripts/rank-providers.ts"
+    "rank-providers": "tsx scripts/rank-providers.ts",
+    "generate-briefs": "tsx scripts/generate-briefs.ts"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",

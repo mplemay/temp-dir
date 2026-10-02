@@ -1,0 +1,268 @@
+{
+  "generated_at": "2026-10-02T18:07:26.272Z",
+  "model": "gpt-6-luna",
+  "reasoning_effort": "medium",
+  "as_of": "2026-10-02",
+  "briefs": [
+    {
+      "npi": "1600000045",
+      "meeting_script": "For your CRC cases, I’d like to discuss Tempus xT CDx alongside your current Caris workflow. The recent focus on xT CDx companion-diagnostic claims in colorectal cancer makes this a timely conversation. xT CDx includes 648 genes; we can review where it may fit your testing approach and what questions you’d want answered before considering a change.",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000035",
+      "meeting_script": "With a mixed-tumor practice and an in-house lab, there are several timely topics to review: liquid testing when tissue is limited, CRC companion diagnostics, HER2, HRD, prostate HRR, and heme testing. Tempus offers xF+, xF, xT CDx, HER2 IHC, HRD, and tumor-only xT. We can focus on the tumor types and testing gaps most relevant to your team.",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000042",
+      "meeting_script": "For your mixed-tumor cases, several current topics may be relevant: liquid testing when tissue is limited, CRC companion diagnostics, HER2, HRD, prostate HRR, and heme testing. Tempus offers xF+, xF, xT CDx, HER2 IHC, HRD, and tumor-only xT. Since your current lab isn’t specified, we can start with your workflow and identify which areas merit a closer look.",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000017",
+      "meeting_script": "For your CRC cases, I’d welcome a conversation about Tempus xT CDx in the context of your in-house testing. The recent xT CDx companion-diagnostic headlines in colorectal cancer create a timely reason to review it. The assay includes 648 genes, and we can discuss how it might fit your existing approach and which clinical questions you’d like to address.",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000032",
+      "meeting_script": "For your prostate patients, the current discussion around NGS and HRR genes offers a timely opportunity to review Tempus xT CDx alongside FMI. The assay includes 648 genes. I’d be interested in how you approach genomic testing today and whether a review of the panel’s role in your prostate workflow would be useful.",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000052",
+      "meeting_script": "For your CRC patients, I’d like to discuss Tempus xT CDx as a potential complement or alternative to your current Guardant workflow. The colorectal companion-diagnostic headlines make this a timely topic. xT CDx includes 648 genes; we can review the assay and discuss where tissue-based testing could fit your current testing decisions.",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000016",
+      "meeting_script": "For your breast practice, the HER2-low and ultralow therapy-selection discussion makes this a good time to review Tempus HER2 IHC and xT CDx alongside Guardant. xT CDx includes 648 genes. I’d like to hear how you currently assess HER2 and explore whether a focused review of these Tempus options would be useful for your workflow.",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000051",
+      "meeting_script": "For your breast patients, HER2-low and ultralow findings are an important topic in therapy selection. Since you currently use Caris, could we review Tempus HER2 IHC and xT CDx as options to consider? xT CDx includes 648 genes. I’d like to understand your current HER2 workflow and what evidence or details would make a comparison useful.",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000006",
+      "meeting_script": "For heme cases, I understand you’re unsure which lab is currently used and want to avoid a solid-tumor plus-normal workflow. Tempus xT is a tumor-only panel option for hematologic malignancies, with 648 genes and a listed turnaround of 9 days. You’d asked for guidance on which tumor-only path to order; let’s review the appropriate ordering workflow together.",
+      "objection_response": "I understand the concern about accidentally following the solid-tumor plus-normal workflow. Tempus xT is the tumor-only panel option in this packet for hematologic malignancies; it includes 648 genes and has a listed turnaround of 9 days. Let’s confirm the correct heme ordering path for your cases."
+    },
+    {
+      "npi": "1600000002",
+      "meeting_script": "For your breast patients, you’d like a clearer HER2-low therapy-decision story before considering a change from FMI. The current HER2-low and ultralow discussion makes this a good time to review Tempus HER2 IHC and xT CDx. xT CDx includes 648 genes. What information would help you evaluate HER2 IHC in your current decision-making workflow?",
+      "objection_response": "That makes sense; you want a clearer HER2-low decision story before changing from FMI. We can review Tempus HER2 IHC alongside xT CDx, which includes 648 genes, and focus the discussion on how HER2 IHC fits your therapy-selection workflow. The packet doesn’t include an IHC performance metric, so I’d avoid making a quantitative comparison."
+    },
+    {
+      "npi": "1600000027",
+      "meeting_script": "For your hematologic malignancy cases, the tumor-only panel discussion is a timely reason to review Tempus xT alongside your current Caris workflow. Tempus xT is a tumor-only panel option with 648 genes and a listed turnaround of 9 days. Could we discuss how you currently handle heme testing and whether this workflow merits a closer look?",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000021",
+      "meeting_script": "For a mixed-tumor practice currently using Caris, we can review several timely areas: liquid testing when tissue is limited, CRC companion diagnostics, HER2, HRD, prostate HRR, and heme testing. Tempus options include xF+, xF, xT CDx, HER2 IHC, HRD, and tumor-only xT. Which tumor types or testing questions would be most useful to prioritize with your team?",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000004",
+      "meeting_script": "You’re interested in a thoracic liquid option, but turnaround compared with Guardant is a concern. Tempus xF+ and xF are worth discussing for NSCLC, including situations where tissue is QNS and EGFR or ALK resistance is relevant. Both have a listed turnaround of 6 days; we can review that figure and discuss how liquid testing might fit your workflow.",
+      "objection_response": "I understand the concern about turnaround versus Guardant liquid. The packet lists a 6-day turnaround for both Tempus xF+ and xF. I can share that figure for comparison, while noting that the packet doesn’t provide Guardant’s turnaround, so I can’t claim Tempus is faster."
+    },
+    {
+      "npi": "1600000046",
+      "meeting_script": "For your prostate patients, the discussion around NGS and HRR genes creates a timely opening to review Tempus xT CDx alongside Guardant. The assay includes 648 genes. Could we discuss how HRR testing fits your current prostate workflow and whether reviewing xT CDx would help inform your approach?",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000010",
+      "meeting_script": "For your CRC cases, the current companion-diagnostic discussion makes this a timely opportunity to review Tempus xT CDx alongside Guardant. The assay includes 648 genes. I’d like to understand how you currently approach testing and explore whether xT CDx merits consideration in your colorectal workflow.",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000030",
+      "meeting_script": "For your breast patients, HER2-low and ultralow findings are a timely therapy-selection topic. Since your current lab isn’t specified, we can start with your HER2 workflow and review Tempus HER2 IHC and xT CDx. xT CDx includes 648 genes. Would a focused discussion of these options and how they fit your current practice be helpful?",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000011",
+      "meeting_script": "For your prostate patients, the current focus on NGS and HRR genes is a good reason to review Tempus xT CDx alongside your in-house testing. The assay includes 648 genes. I’d like to hear how your current approach handles prostate genomic testing and discuss whether xT CDx could be relevant to your workflow.",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000041",
+      "meeting_script": "For your hematologic malignancy cases, the tumor-only panel discussion makes Tempus xT a timely topic alongside your in-house testing. xT is a tumor-only panel option with 648 genes and a listed turnaround of 9 days. Could we review how heme cases are handled today and discuss where this testing path may fit?",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000014",
+      "meeting_script": "For your NSCLC cases, especially when tissue is QNS, the current focus on ctDNA for EGFR and ALK resistance makes Tempus xF+ and xF relevant to review alongside FMI. xF+ includes 523 genes and xF includes 105; each has a listed turnaround of 6 days. Could we discuss how liquid testing fits your thoracic workflow?",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000034",
+      "meeting_script": "For your NSCLC patients, particularly when tissue is QNS, the current ctDNA discussion around EGFR and ALK resistance is a timely reason to review Tempus xF+ and xF alongside Guardant. xF+ includes 523 genes and xF 105; each has a listed turnaround of 6 days. How do you currently approach liquid testing in these cases?",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000008",
+      "meeting_script": "You asked how community gynecologic clinics can access HRD findings without a long send-out, while currently using FMI. Tempus HRD is relevant to the current discussion around homologous-recombination findings and PARP decisions. I’d be glad to review the access and ordering workflow with you and understand what would make the process workable for your community clinic.",
+      "objection_response": "I hear that avoiding a long send-out matters. The packet lists Tempus HRD as an option but provides no turnaround-time or access metric, so I can’t promise a faster result. Let’s review the ordering and access workflow for your community gynecologic clinic and clarify what to expect before you consider a change."
+    },
+    {
+      "npi": "1600000005",
+      "meeting_script": "You prefer your in-house lab for surgical gynecologic specimens and are open to a send-out conversation if specimen flow stays simple. Given the current focus on HRD and PARP decisions, we can review Tempus HRD and map how a send-out would fit your existing process. I’d like to understand the specimen-flow steps that need to stay straightforward.",
+      "objection_response": "I understand that keeping specimen flow simple is essential, especially for surgical gynecologic cases. The packet identifies Tempus HRD but gives no specimen-flow or turnaround metrics, so I won’t assume it is simpler. Let’s walk through your current in-house process and identify the steps a Tempus send-out would require."
+    },
+    {
+      "npi": "1600000003",
+      "meeting_script": "You’re looking to confirm HRD status before later-line therapy and track academic gynecologic trial eligibility. That aligns with the current discussion around HRD findings and PARP decisions. Since you use Caris and have not stated a lab preference or switching intent, we can focus on how Tempus HRD might support those questions without assuming a change to your current workflow.",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000039",
+      "meeting_script": "For your NSCLC cases, especially when tissue is QNS, the ctDNA discussion around EGFR and ALK resistance makes Tempus xF+ and xF timely to review alongside Caris. xF+ includes 523 genes and xF includes 105; both have a listed turnaround of 6 days. Could we discuss where liquid testing fits your current thoracic workflow?",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000028",
+      "meeting_script": "For your gynecologic patients, the current focus on HRD and PARP decisions is a good reason to review Tempus HRD alongside Guardant. The packet also lists xT CDx, which includes 648 genes. I’d like to learn how you currently assess HRD and discuss whether a focused review of Tempus HRD would be useful.",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000026",
+      "meeting_script": "For your gynecologic practice currently using FMI, the HRD and PARP-decision discussion creates a timely opening to review Tempus HRD. The packet also lists xT CDx, with 648 genes. Could we talk through your current HRD testing approach and identify what you’d want to compare when considering another option?",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000018",
+      "meeting_script": "For your gynecologic patients, the current discussion around HRD and PARP decisions makes Tempus HRD a timely topic. Since your current lab isn’t specified, I’d start by understanding your existing testing workflow and how you assess HRD. Then we can decide whether a closer review of the Tempus option would be useful.",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000024",
+      "meeting_script": "For your NSCLC patients, particularly when tissue is QNS, the ctDNA discussion around EGFR and ALK resistance makes Tempus xF+ and xF timely to review. xF+ includes 523 genes and xF 105; each has a listed turnaround of 6 days. Since your current lab isn’t specified, we can start with how you handle liquid testing today.",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000020",
+      "meeting_script": "For your hematologic malignancy cases, the tumor-only panel discussion creates a timely reason to review Tempus xT alongside FMI. xT is a tumor-only option with 648 genes and a listed turnaround of 9 days. Could we discuss your current heme testing process and whether this panel path might be useful for your cases?",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000048",
+      "meeting_script": "For your gynecologic patients, the current focus on HRD and PARP decisions makes Tempus HRD a timely topic. Since your current lab isn’t specified, we can start with how you approach HRD testing today, then review the Tempus option and the questions you’d want answered about its role in your workflow.",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000009",
+      "meeting_script": "For your NSCLC cases, particularly when tissue is QNS, the current ctDNA discussion around EGFR and ALK resistance makes Tempus xF+ and xF relevant alongside Caris. xF+ includes 523 genes and xF 105; both have a listed turnaround of 6 days. Could we discuss how liquid testing fits into your current thoracic workflow?",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000044",
+      "meeting_script": "For your NSCLC patients, especially when tissue is QNS, the ctDNA discussion around EGFR and ALK resistance creates a timely opening to review Tempus xF+ and xF alongside FMI. xF+ includes 523 genes and xF 105; each has a listed turnaround of 6 days. How do you currently approach liquid testing in these situations?",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000029",
+      "meeting_script": "For your NSCLC cases, the ctDNA discussion around EGFR and ALK resistance when tissue is QNS makes Tempus xF+ and xF a timely topic alongside your in-house testing. xF+ includes 523 genes and xF 105; both have a listed turnaround of 6 days. Could we review where liquid testing could fit your current workflow?",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000040",
+      "meeting_script": "For your gynecologic patients, the current focus on HRD findings and PARP decisions makes Tempus HRD timely to discuss alongside Guardant. The packet also lists xT CDx, with 648 genes. I’d like to understand how you approach HRD testing today and explore whether a closer review of Tempus HRD would be useful.",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000025",
+      "meeting_script": "Since you already use Tempus, this is an opportunity to review your prostate testing in light of the current focus on NGS and HRR genes. Tempus xT CDx includes 648 genes. Could we look at how your existing testing approach addresses prostate HRR questions and identify whether any part of the workflow merits a closer review?",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000015",
+      "meeting_script": "For your NSCLC patients, particularly when tissue is QNS, the ctDNA focus on EGFR and ALK resistance makes Tempus xF+ and xF relevant to review alongside Caris. xF+ includes 523 genes and xF 105; both have a listed turnaround of 6 days. Could we talk about how liquid testing fits your current thoracic workflow?",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000050",
+      "meeting_script": "For your NSCLC cases, especially when tissue is QNS, the current ctDNA discussion around EGFR and ALK resistance makes Tempus xF+ and xF timely to review alongside FMI. xF+ includes 523 genes and xF 105; each has a listed turnaround of 6 days. How does liquid testing fit your current approach in these cases?",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000033",
+      "meeting_script": "For your gynecologic patients, the current HRD and PARP-decision discussion makes Tempus HRD a timely option to review alongside Caris. The packet also lists xT CDx, with 648 genes. I’d like to learn how you currently assess HRD and discuss whether a focused review of Tempus HRD would be useful for your practice.",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000012",
+      "meeting_script": "For your gynecologic patients, the current focus on HRD findings and PARP decisions makes Tempus HRD relevant to discuss. Since your current lab isn’t specified, we can begin with your HRD testing workflow and what information is most important to your team, then decide whether a closer review of the Tempus option makes sense.",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000022",
+      "meeting_script": "For your NSCLC cases, particularly when tissue is QNS, the current ctDNA discussion around EGFR and ALK resistance makes Tempus xF+ and xF relevant alongside Guardant. xF+ includes 523 genes and xF 105; both have a listed turnaround of 6 days. Could we review how liquid testing fits your current thoracic workflow?",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000036",
+      "meeting_script": "For your NSCLC patients, especially when tissue is QNS, the ctDNA focus on EGFR and ALK resistance creates a timely reason to review Tempus xF+ and xF. Each has a listed turnaround of 6 days; xF+ includes 523 genes and xF 105. Since your current lab isn’t specified, we can start with your present liquid-testing workflow.",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000038",
+      "meeting_script": "For your gynecologic practice currently using FMI, the HRD and PARP-decision discussion makes Tempus HRD timely to review. The packet also lists xT CDx, with 648 genes. Could we discuss how you currently assess HRD and what information would help you evaluate Tempus HRD in the context of your existing approach?",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000047",
+      "meeting_script": "For your gynecologic patients, the current discussion around HRD and PARP decisions makes Tempus HRD a timely topic alongside your in-house testing. The packet also lists xT CDx, with 648 genes. I’d like to understand your current HRD workflow and explore whether reviewing the Tempus option would be useful.",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000023",
+      "meeting_script": "For your gynecologic patients, the HRD and PARP-decision discussion creates a timely opportunity to review Tempus HRD alongside your in-house testing. The packet also lists xT CDx, with 648 genes. Could we talk through your current HRD approach and see whether a closer look at the Tempus option would be useful for your team?",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000031",
+      "meeting_script": "Since you already use Tempus, this is a good opportunity to review your CRC testing in light of the current xT CDx companion-diagnostic discussion. Tempus xT CDx includes 648 genes. Could we discuss how it fits your current colorectal testing approach and whether there are any questions or workflow details your team would like to revisit?",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000037",
+      "meeting_script": "Since you already use Tempus, we can review your breast testing in light of the HER2-low and ultralow therapy-selection discussion. The available options include HER2 IHC and xT CDx, which includes 648 genes. I’d like to hear how these fit your current workflow and identify any questions your team wants to address.",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000007",
+      "meeting_script": "You already use Tempus, and your priority is operational follow-through on pending cases—not a new assay pitch. Let’s focus our conversation on the open cases and where follow-up is needed across your existing testing. We can keep the discussion centered on support for your current xF+, xF, xT CDx, HER2 IHC, HRD, and xT workflows.",
+      "objection_response": "I understand that better follow-through on pending cases—not another assay pitch—is the priority. The packet lists turnaround times for xF+ and xF at 6 days and xT at 9 days. Let’s review the pending cases against the applicable listed turnaround and identify which need follow-up; I won’t assume a service commitment beyond those metrics."
+    },
+    {
+      "npi": "1600000049",
+      "meeting_script": "Since you already use Tempus for thoracic testing, the current ctDNA discussion around EGFR and ALK resistance when tissue is QNS is a timely reason to review xF+ and xF in your workflow. xF+ includes 523 genes and xF 105; both have a listed turnaround of 6 days. Could we revisit how these options fit your NSCLC testing approach?",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000019",
+      "meeting_script": "Since you already use Tempus for NSCLC, the ctDNA focus on EGFR and ALK resistance when tissue is QNS offers a timely opportunity to review your xF+ and xF workflow. xF+ includes 523 genes and xF 105; each has a listed turnaround of 6 days. Could we discuss how liquid testing fits your approach at progression or when tissue is limited?",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000001",
+      "meeting_script": "You already send tissue to Tempus and asked about adding liquid testing at progression rather than waiting for another biopsy. We can review xF+ and xF for that NSCLC use case, including the current focus on ctDNA for EGFR and ALK resistance when tissue is limited. xF+ includes 523 genes and xF 105; both have a listed turnaround of 6 days.",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000013",
+      "meeting_script": "Since you already use Tempus, the current focus on HRD findings and PARP decisions is a useful opportunity to review Tempus HRD in your gynecologic workflow. The packet also lists xT CDx, with 648 genes. Could we discuss how HRD testing fits your current approach and whether there are any questions your team would like to revisit?",
+      "objection_response": ""
+    },
+    {
+      "npi": "1600000043",
+      "meeting_script": "Since you already use Tempus, we can review Tempus HRD in the context of your gynecologic testing and the current discussion around HRD findings and PARP decisions. The packet also lists xT CDx, with 648 genes. I’d like to hear how HRD fits your current workflow and whether a focused review would be helpful.",
+      "objection_response": ""
+    }
+  ]
+}

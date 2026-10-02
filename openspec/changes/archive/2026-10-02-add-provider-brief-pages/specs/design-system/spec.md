@@ -1,19 +1,6 @@
-# design-system Specification
+# Spec Delta
 
-## Purpose
-
-Defines the shared UI system for the application: tokenized theming and reusable primitives that routes compose instead of one-off styled markup.
-
-## Requirements
-
-### Requirement: Tokenized theme
-
-The application SHALL style pages with semantic color and typography tokens (for example background, foreground, and muted text) rather than hard-coded palette utilities on page layouts.
-
-#### Scenario: Home page uses theme tokens
-
-- **WHEN** a user views `/`
-- **THEN** the page background and text colors come from the shared theme tokens
+## MODIFIED Requirements
 
 ### Requirement: Shared UI primitives on the overview home
 
@@ -48,33 +35,7 @@ Shared UI primitives SHALL live in the project as source files that routes impor
 - **WHEN** a developer inspects the provider brief route
 - **THEN** card and badge primitives are imported from the shared UI module path under `@/`, not inlined as custom markup in the route
 
-### Requirement: Shared sidebar chrome
-
-The application chrome SHALL be composed from the shared sidebar primitive, with navigation items and a main content inset, not custom nav markup.
-
-#### Scenario: Sidebar primitive on a feed page
-
-- **WHEN** a user views the market intelligence page
-- **THEN** the navigation is the shared sidebar, and the page content sits in the main inset beside it
-
-### Requirement: Shared primitives on browse pages
-
-Feed browse pages SHALL be composed from shared card, table, and badge primitives rather than one-off styled lists.
-
-#### Scenario: Market intelligence table
-
-- **WHEN** a user views the market intelligence page
-- **THEN** providers appear in a shared table, and incumbent lab is shown with a shared badge
-
-#### Scenario: Product knowledge cards
-
-- **WHEN** a user views the product knowledge page
-- **THEN** each assay appears in a shared card with specimen and regulatory status as shared badges
-
-#### Scenario: CRM note cards
-
-- **WHEN** a user views the CRM page
-- **THEN** each note appears in a shared card
+## ADDED Requirements
 
 ### Requirement: Shared primitives on the provider brief page
 
