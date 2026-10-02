@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "skills": {
+    "devtools-vite-plugin": {
+      "source": "@tanstack/devtools-vite",
+      "sourceType": "node_modules",
+      "computedHash": "243ab52746d0f3ab4062b108cff4f81e358d3787b8153f8ef84693c3f7c9fbd8"
+    },
+    "react-start": {
+      "source": "@tanstack/react-start",
+      "sourceType": "node_modules",
+      "computedHash": "e508e5a82d7eb15cc7fcbf16763f6c270cd0be31bfb0d80d51eb2cbb43eacaca"
+    }
+  }
+}
