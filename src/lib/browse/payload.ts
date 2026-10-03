@@ -13,6 +13,7 @@ export type RankedListRow = {
 };
 
 export type BriefAssayPayload = {
+  test_id: string;
   display_name: string;
   tat_days: number | null;
   gene_count: number | null;
@@ -93,6 +94,7 @@ export function toBriefPagePayload(brief: BriefPagePayload): BriefPagePayload {
       body: note.body,
     })),
     assays: brief.assays.map((assay) => ({
+      test_id: assay.test_id,
       display_name: assay.display_name,
       tat_days: assay.tat_days,
       gene_count: assay.gene_count,

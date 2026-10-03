@@ -48,6 +48,11 @@ Shared UI primitives SHALL live in the project as source files that routes impor
 - **WHEN** a developer inspects the provider brief route
 - **THEN** table and badge primitives are imported from the shared UI module path under `@/`, not inlined as custom markup in the route
 
+#### Scenario: Feed detail pages import primitives
+
+- **WHEN** a developer inspects an assay, market-event, or CRM-note detail route
+- **THEN** table and badge primitives are imported from the shared UI module path under `@/`, not inlined as custom markup in the route
+
 ### Requirement: Shared sidebar chrome
 
 The application chrome SHALL be composed from the shared sidebar primitive, with navigation items and a main content inset, not custom nav markup.
@@ -99,6 +104,25 @@ The provider brief page SHALL place the meeting script and objection handler in 
 
 - **WHEN** a user views a ranked provider’s brief page
 - **THEN** incumbent lab and readiness are shown with shared badges
+
+### Requirement: Shared primitives on feed detail pages
+
+Assay, market-event, and CRM-note pages SHALL be composed from shared table and badge primitives rather than stacked cards as the primary composition.
+
+#### Scenario: Assay page uses shared primitives
+
+- **WHEN** a user views an accepted assay’s detail page
+- **THEN** specimen and regulatory status appear as shared badges, and the page is not a stack of cards
+
+#### Scenario: Event page uses shared primitives
+
+- **WHEN** a user views an accepted market event’s detail page
+- **THEN** relevant tests appear in a shared table, not nested cards
+
+#### Scenario: Note page uses shared primitives
+
+- **WHEN** a user views an accepted CRM note’s detail page
+- **THEN** channel appears as a shared badge, and sibling notes appear in a shared table
 
 ### Requirement: Shared data table on ranked worklists
 

@@ -41,14 +41,18 @@ function provider(overrides: Partial<AcceptedProvider> = {}): AcceptedProvider {
 }
 
 const retainNote: AcceptedNote = {
+  note_id: "harper-chen-ops",
   npi: "1600000007",
   note_date: "2026-09-22",
+  channel: "in_person",
   body: "Already orders a lot of Tempus. Wanted operational follow-through rather than a new assay pitch.",
 };
 
 const switchNote: AcceptedNote = {
+  note_id: "quinn-chen-tat",
   npi: "1600000004",
   note_date: "2026-09-04",
+  channel: "in_person",
   body: "Concerned about turnaround time versus Guardant liquid. Interested in a thoracic liquid option.",
 };
 

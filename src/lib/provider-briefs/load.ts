@@ -42,6 +42,7 @@ export class BriefNotFoundError extends Error {
 }
 
 export type RelatedAssay = {
+  test_id: string;
   display_name: string;
   tat_days: number | null;
   gene_count: number | null;
@@ -139,6 +140,7 @@ function joinBrief(
     matched_events: provider.matched_events,
     crm_notes: notesForNpi(ranked.npi, notes),
     assays: assaysForProvider(provider, assays).map((assay) => ({
+      test_id: assay.test_id,
       display_name: assay.display_name,
       tat_days: assay.tat_days,
       gene_count: assay.gene_count,

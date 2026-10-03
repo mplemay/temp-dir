@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { getProductKnowledge } from "@/lib/browse/server";
 import { unpublishedMetric } from "@/lib/browse/display";
 import { Badge } from "@/components/ui/badge";
@@ -11,7 +11,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
-export const Route = createFileRoute("/product-knowledge")({
+export const Route = createFileRoute("/product-knowledge/")({
   loader: () => getProductKnowledge(),
   component: ProductKnowledgePage,
   head: () => ({
@@ -47,7 +47,15 @@ function ProductKnowledgePage() {
         <TableBody>
           {assays.map((assay) => (
             <TableRow key={assay.test_id}>
-              <TableCell className="font-medium">{assay.display_name}</TableCell>
+              <TableCell className="font-medium">
+                <Link
+                  to="/product-knowledge/$testId"
+                  params={{ testId: assay.test_id }}
+                  className="underline-offset-4 hover:underline"
+                >
+                  {assay.display_name}
+                </Link>
+              </TableCell>
               <TableCell>
                 <Badge variant="secondary">{assay.specimen}</Badge>
               </TableCell>

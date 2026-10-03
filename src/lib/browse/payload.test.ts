@@ -41,7 +41,9 @@ describe("toBriefPagePayload", () => {
       impact_score: 210.4,
       matched_events: [],
       crm_notes: [],
-      assays: [{ display_name: "Tempus xF+", tat_days: null, gene_count: null }],
+      assays: [
+        { test_id: "xf-plus", display_name: "Tempus xF+", tat_days: null, gene_count: null },
+      ],
       meeting_script: "Discuss liquid.",
       objection_response: "Six-day TAT.",
     });
@@ -50,6 +52,7 @@ describe("toBriefPagePayload", () => {
     expect(payload.concern).toBe("turnaround versus Guardant");
     expect(payload.interest).toBe("thoracic liquid option");
     expect(payload.impact_score).toBe(210.4);
+    expect(payload.assays[0]?.test_id).toBe("xf-plus");
     expect(payload.assays[0]?.tat_days).toBeNull();
     expect(payload.assays[0]?.gene_count).toBeNull();
   });

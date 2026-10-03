@@ -18,6 +18,13 @@ const navItems = [
   { title: "CRM", to: "/crm", icon: NotebookPen },
 ] as const;
 
+export function isSidebarItemActive(pathname: string, to: string): boolean {
+  if (to === "/") {
+    return pathname === "/";
+  }
+  return pathname === to || pathname.startsWith(`${to}/`);
+}
+
 export function AppSidebar() {
   const pathname = useRouterState({ select: (state) => state.location.pathname });
 
@@ -30,7 +37,10 @@ export function AppSidebar() {
             <SidebarMenu>
               {navItems.map((item) => (
                 <SidebarMenuItem key={item.to}>
-                  <SidebarMenuButton render={<Link to={item.to} />} isActive={pathname === item.to}>
+                  <SidebarMenuButton
+                    render={<Link to={item.to} />}
+                    isActive={isSidebarItemActive(pathname, item.to)}
+                  >
                     <item.icon />
                     <span>{item.title}</span>
                   </SidebarMenuButton>

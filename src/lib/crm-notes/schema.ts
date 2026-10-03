@@ -1,8 +1,12 @@
 import { z } from "zod";
 
+export const noteChannelSchema = z.enum(["call", "in_person", "email"]);
+
 export const noteRowSchema = z.object({
+  note_id: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
   npi: z.string().regex(/^\d{10}$/, "NPI must be 10 digits"),
   note_date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+  channel: noteChannelSchema,
   body: z.string().trim().min(1),
 });
 

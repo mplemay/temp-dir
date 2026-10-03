@@ -5,6 +5,7 @@ import {
   defaultFixturePath,
   loadCrmNotes,
   notesOutsideReservedSet,
+  reservedNpisBelowMinNotes,
   reservedNpisWithoutNotes,
 } from "./load";
 
@@ -18,25 +19,17 @@ const namedPatientMarker = /\b(MRN|DOB|patient)\b/i;
 const assayClaim = /\d+\s*-?\s*days?\b|\d+\s*genes?\b|\d+(?:\.\d+)?\s*%/i;
 
 describe("committed crm-notes fixtures", () => {
-  it("accepts eight reserved-NPI notes with no skips", () => {
+  it("accepts twenty-four reserved-NPI notes with no skips", () => {
     const result = loadCrmNotes();
     expect(result.report.skipped).toEqual([]);
-    expect(result.report.acceptedNotes).toBe(8);
-    expect(result.notes.map((note) => note.npi)).toEqual([
-      "1600000001",
-      "1600000002",
-      "1600000003",
-      "1600000004",
-      "1600000005",
-      "1600000006",
-      "1600000007",
-      "1600000008",
-    ]);
-    const quinn = result.notes.find((note) => note.npi === "1600000004");
+    expect(result.report.acceptedNotes).toBe(24);
+    const ids = result.notes.map((note) => note.note_id);
+    expect(new Set(ids).size).toBe(24);
+    const quinn = result.notes.find((note) => note.note_id === "quinn-chen-tat");
     expect(quinn?.body).toMatch(/turnaround time/i);
   });
 
-  it("covers every reserved CRM NPI and invents none", () => {
+  it("covers every reserved CRM NPI at least twice and invents none", () => {
     const notes = loadCrmNotes();
     const territory = loadMarketIntelligence();
     const reservedNpis = territory.providers
@@ -44,6 +37,7 @@ describe("committed crm-notes fixtures", () => {
       .map((provider) => provider.npi);
 
     expect(reservedNpisWithoutNotes(reservedNpis, notes.notes)).toEqual([]);
+    expect(reservedNpisBelowMinNotes(reservedNpis, notes.notes, 2)).toEqual([]);
     expect(notesOutsideReservedSet(reservedNpis, notes.notes)).toEqual([]);
   });
 

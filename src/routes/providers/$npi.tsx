@@ -1,4 +1,4 @@
-import { createFileRoute, notFound } from "@tanstack/react-router";
+import { Link, createFileRoute, notFound } from "@tanstack/react-router";
 import { getProviderBrief } from "@/lib/browse/server";
 import { unpublishedMetric } from "@/lib/browse/display";
 import { Badge } from "@/components/ui/badge";
@@ -124,8 +124,16 @@ function ProviderBriefPage() {
                 </TableHeader>
                 <TableBody>
                   {brief.assays.map((assay) => (
-                    <TableRow key={assay.display_name}>
-                      <TableCell>{assay.display_name}</TableCell>
+                    <TableRow key={assay.test_id}>
+                      <TableCell>
+                        <Link
+                          to="/product-knowledge/$testId"
+                          params={{ testId: assay.test_id }}
+                          className="underline-offset-4 hover:underline"
+                        >
+                          {assay.display_name}
+                        </Link>
+                      </TableCell>
                       <TableCell>{unpublishedMetric(assay.tat_days)}</TableCell>
                       <TableCell>{unpublishedMetric(assay.gene_count)}</TableCell>
                     </TableRow>

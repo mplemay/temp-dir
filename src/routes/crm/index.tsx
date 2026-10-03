@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { getCrmNotes } from "@/lib/browse/server";
 import {
   Table,
@@ -9,7 +9,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
-export const Route = createFileRoute("/crm")({
+export const Route = createFileRoute("/crm/")({
   loader: () => getCrmNotes(),
   component: CrmPage,
   head: () => ({
@@ -38,8 +38,16 @@ function CrmPage() {
         </TableHeader>
         <TableBody>
           {notes.map((note) => (
-            <TableRow key={`${note.npi}-${note.note_date}-${note.body}`}>
-              <TableCell>{note.note_date}</TableCell>
+            <TableRow key={note.note_id}>
+              <TableCell>
+                <Link
+                  to="/crm/$noteId"
+                  params={{ noteId: note.note_id }}
+                  className="underline-offset-4 hover:underline"
+                >
+                  {note.note_date}
+                </Link>
+              </TableCell>
               <TableCell>{note.clinician_name ?? note.npi}</TableCell>
               <TableCell className="whitespace-normal">{note.body}</TableCell>
             </TableRow>

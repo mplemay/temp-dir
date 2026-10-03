@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { getMarketIntelligence } from "@/lib/browse/server";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -10,7 +10,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
-export const Route = createFileRoute("/market-intelligence")({
+export const Route = createFileRoute("/market-intelligence/")({
   loader: () => getMarketIntelligence(),
   component: MarketIntelligencePage,
   head: () => ({
@@ -42,7 +42,15 @@ function MarketIntelligencePage() {
         <TableBody>
           {providers.map((provider) => (
             <TableRow key={provider.npi}>
-              <TableCell className="font-medium">{provider.full_name}</TableCell>
+              <TableCell className="font-medium">
+                <Link
+                  to="/providers/$npi"
+                  params={{ npi: provider.npi }}
+                  className="underline-offset-4 hover:underline"
+                >
+                  {provider.full_name}
+                </Link>
+              </TableCell>
               <TableCell>{provider.org_name}</TableCell>
               <TableCell>{provider.primary_tumor_focus}</TableCell>
               <TableCell>
@@ -66,7 +74,15 @@ function MarketIntelligencePage() {
           <TableBody>
             {events.map((event) => (
               <TableRow key={event.event_id}>
-                <TableCell className="whitespace-normal">{event.headline}</TableCell>
+                <TableCell className="whitespace-normal">
+                  <Link
+                    to="/market-intelligence/$eventId"
+                    params={{ eventId: event.event_id }}
+                    className="underline-offset-4 hover:underline"
+                  >
+                    {event.headline}
+                  </Link>
+                </TableCell>
                 <TableCell>{event.tumor_type}</TableCell>
               </TableRow>
             ))}

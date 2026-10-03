@@ -5,6 +5,7 @@ import {
   defaultFixturePath as defaultNotesPath,
   loadCrmNotes,
   MissingFixtureError as CrmMissingFixtureError,
+  noteForId,
   parseCrmNotes,
 } from "@/lib/crm-notes/load";
 import {
@@ -34,6 +35,7 @@ import {
   MissingFixtureError as RankedMissingFixtureError,
 } from "@/lib/ranked-providers/load";
 import { notesWithClinicianNames } from "./display";
+import { toAssayPagePayload, toEventPagePayload, toNotePagePayload } from "./detail";
 import {
   productKnowledgeAssetKeys,
   resolveFixtureText,
@@ -215,3 +217,41 @@ export const getCrmNotes = createServerFn({ method: "GET" }).handler(async () =>
     notes: notesWithClinicianNames(notes.notes, market.providers),
   };
 });
+
+const noteIdSchema = z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/);
+
+export const getAssay = createServerFn({ method: "GET" })
+  .validator(z.object({ testId: z.string().min(1) }))
+  .handler(async ({ data }) => {
+    const { knowledge } = await hostedSnapshot();
+    const assay = knowledge.assays.find((row) => row.test_id === data.testId);
+    if (!assay) {
+      return null;
+    }
+    return toAssayPagePayload(assay);
+  });
+
+export const getMarketEvent = createServerFn({ method: "GET" })
+  .validator(z.object({ eventId: z.string().min(1) }))
+  .handler(async ({ data }) => {
+    const { market, knowledge } = await hostedSnapshot();
+    const event = market.events.find((row) => row.event_id === data.eventId);
+    if (!event) {
+      return null;
+    }
+    return toEventPagePayload(event, knowledge.assays);
+  });
+
+export const getCrmNote = createServerFn({ method: "GET" })
+  .validator(z.object({ noteId: z.string() }))
+  .handler(async ({ data }) => {
+    if (!noteIdSchema.safeParse(data.noteId).success) {
+      return null;
+    }
+    const { notes, market } = await hostedSnapshot();
+    const note = noteForId(data.noteId, notes.notes);
+    if (!note) {
+      return null;
+    }
+    return toNotePagePayload(note, notes.notes, market.providers);
+  });

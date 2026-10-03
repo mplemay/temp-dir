@@ -2,13 +2,15 @@ import { describe, expect, it } from "vite-plus/test";
 import {
   loadCrmNotes,
   MissingFixtureError,
+  noteForId,
   notesForNpi,
   notesOutsideReservedSet,
   parseCrmNotes,
+  reservedNpisBelowMinNotes,
   reservedNpisWithoutNotes,
 } from "./load";
 
-const noteHeader = ["npi", "note_date", "body"];
+const noteHeader = ["note_id", "npi", "note_date", "channel", "body"];
 
 function csv(header: string[], rows: string[][]): string {
   return [header.join(","), ...rows.map((row) => row.map(csvField).join(","))].join("\n");
@@ -23,15 +25,20 @@ function csvField(value: string): string {
 
 function noteRow(
   overrides: {
+    note_id?: string;
     npi?: string;
     note_date?: string;
+    channel?: string;
     body?: string;
     extra?: string[];
   } = {},
 ): string[] {
+  const npi = overrides.npi ?? "1600000004";
   return [
-    overrides.npi ?? "1600000004",
+    overrides.note_id ?? `note-${npi}`,
+    npi,
     overrides.note_date ?? "2026-09-12",
+    overrides.channel ?? "in_person",
     overrides.body ?? "Dr. Quinn Chen is concerned about turnaround time versus Guardant liquid.",
     ...(overrides.extra ?? []),
   ];
@@ -43,15 +50,21 @@ describe("parseCrmNotes", () => {
     expect(result.report.acceptedNotes).toBe(1);
     expect(result.report.skipped).toEqual([]);
     expect(result.notes[0]?.npi).toBe("1600000004");
+    expect(result.notes[0]?.note_id).toBe("note-1600000004");
+    expect(result.notes[0]?.channel).toBe("in_person");
   });
 
   it("skips bad NPI, empty body, and invalid date while keeping valid rows", () => {
     const result = parseCrmNotes(
       csv(noteHeader, [
-        noteRow({ npi: "1600000001", body: "Valid note about liquid at progression." }),
-        noteRow({ npi: "123", body: "Bad NPI row." }),
-        noteRow({ npi: "1600000002", body: "" }),
-        noteRow({ npi: "1600000003", note_date: "09/12/2026" }),
+        noteRow({
+          note_id: "avery-valid",
+          npi: "1600000001",
+          body: "Valid note about liquid at progression.",
+        }),
+        noteRow({ note_id: "bad-npi", npi: "123", body: "Bad NPI row." }),
+        noteRow({ note_id: "empty-body", npi: "1600000002", body: "" }),
+        noteRow({ note_id: "bad-date", npi: "1600000003", note_date: "09/12/2026" }),
       ]),
     );
     expect(result.report.acceptedNotes).toBe(1);
@@ -61,11 +74,20 @@ describe("parseCrmNotes", () => {
     expect(result.report.skipped.some((skip) => skip.reason.includes("note_date"))).toBe(true);
   });
 
-  it("accepts two valid rows that share an NPI", () => {
+  it("accepts two valid rows that share an NPI and have distinct note ids", () => {
     const result = parseCrmNotes(
       csv(noteHeader, [
-        noteRow({ npi: "1600000004", body: "First visit: concerned about turnaround time." }),
-        noteRow({ npi: "1600000004", body: "Follow-up: still comparing to Guardant liquid." }),
+        noteRow({
+          note_id: "quinn-chen-tat",
+          npi: "1600000004",
+          body: "First visit: concerned about turnaround time.",
+        }),
+        noteRow({
+          note_id: "quinn-chen-followup",
+          npi: "1600000004",
+          channel: "call",
+          body: "Follow-up: still comparing to Guardant liquid.",
+        }),
       ]),
     );
     expect(result.report.acceptedNotes).toBe(2);
@@ -73,6 +95,20 @@ describe("parseCrmNotes", () => {
     expect(result.notes.map((note) => note.body)).toEqual([
       "First visit: concerned about turnaround time.",
       "Follow-up: still comparing to Guardant liquid.",
+    ]);
+  });
+
+  it("skips a duplicate note_id after the first row", () => {
+    const result = parseCrmNotes(
+      csv(noteHeader, [
+        noteRow({ note_id: "dup-id", npi: "1600000001", body: "First visit about liquid." }),
+        noteRow({ note_id: "dup-id", npi: "1600000002", body: "Different NPI same id." }),
+      ]),
+    );
+    expect(result.report.acceptedNotes).toBe(1);
+    expect(result.notes[0]?.npi).toBe("1600000001");
+    expect(result.report.skipped).toEqual([
+      expect.objectContaining({ reason: "note_id: duplicate" }),
     ]);
   });
 
@@ -87,12 +123,26 @@ describe("parseCrmNotes", () => {
   });
 });
 
-describe("notesForNpi and coverage helpers", () => {
+describe("notesForNpi, noteForId, and coverage helpers", () => {
   const notes = parseCrmNotes(
     csv(noteHeader, [
-      noteRow({ npi: "1600000004", body: "Concerned about turnaround time." }),
-      noteRow({ npi: "1600000004", body: "Still using Guardant liquid." }),
-      noteRow({ npi: "1600000001", body: "Already orders Tempus tissue." }),
+      noteRow({
+        note_id: "quinn-chen-tat",
+        npi: "1600000004",
+        body: "Concerned about turnaround time.",
+      }),
+      noteRow({
+        note_id: "quinn-chen-followup",
+        npi: "1600000004",
+        note_date: "2026-09-20",
+        channel: "call",
+        body: "Still using Guardant liquid.",
+      }),
+      noteRow({
+        note_id: "avery-chen-liquid-progression",
+        npi: "1600000001",
+        body: "Already orders Tempus tissue.",
+      }),
     ]),
   ).notes;
 
@@ -113,8 +163,24 @@ describe("notesForNpi and coverage helpers", () => {
     ]);
   });
 
+  it("returns the note for quinn-chen-tat", () => {
+    const note = noteForId("quinn-chen-tat", notes);
+    expect(note?.body).toContain("turnaround time");
+    expect(note?.npi).toBe("1600000004");
+  });
+
+  it("returns no note for missing-note", () => {
+    expect(noteForId("missing-note", notes)).toBeUndefined();
+  });
+
   it("reports a reserved NPI with no notes as uncovered", () => {
     expect(reservedNpisWithoutNotes(["1600000004", "1600000008"], notes)).toEqual(["1600000008"]);
+  });
+
+  it("reports a reserved NPI with only one note as below min 2", () => {
+    expect(reservedNpisBelowMinNotes(["1600000004", "1600000001"], notes, 2)).toEqual([
+      "1600000001",
+    ]);
   });
 
   it("reports a note NPI not in the reserved set as extra", () => {

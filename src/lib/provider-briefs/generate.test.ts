@@ -56,8 +56,10 @@ function ranked(overrides: Partial<RankedProviderView> = {}): RankedProviderView
 }
 
 const retainNote: AcceptedNote = {
+  note_id: "avery-chen-liquid-progression",
   npi: "1600000001",
   note_date: "2026-08-14",
+  channel: "in_person",
   body: "Already sends tissue to Tempus. Asked about adding liquid at progression.",
 };
 

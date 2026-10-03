@@ -53,6 +53,8 @@ describe("committed provider-briefs fixture", () => {
       join(fileURLToPath(new URL("../../routes/providers/$npi.tsx", import.meta.url))),
       "utf8",
     );
+    expect(source).toMatch("/product-knowledge/$testId");
+    expect(source).not.toMatch(/openai/);
     expect(source).not.toMatch("@/components/ui/card");
     expect(source).toMatch("@/components/ui/table");
     expect(source).toMatch("@/components/ui/badge");
